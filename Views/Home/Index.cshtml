@@ -5,39 +5,58 @@
 <div class="text-center">
     <h1 class="display-4">@ViewData["Title"]</h1>
     <div class="Espacio-Container">
-        <div class="Boton-Container">
-            <div class="d-flex justify-content-start align-items-start">
-                <button style="color:teal; border:none;" > Cargar archivo txt </button>
+        <div class="BotonCargar-Container">
+            <div class="col-auto">
+                <button type="submit" class="btn btn-outline-secondary mb-3">Cargar Archivo .txt</button>
             </div>
-            <div class="labels-container">
-                <div class="">
-                    <p>Buscar por: </p>
-                    <input class="INPcedula" placeholder="Ingrese la Cedula"/>
-                    <input class="INPnombre"placeholder="Ingrese el Nombre" />
-                    <input class="INPapellido" placeholder="Ingrese el Apellido" />
-                </div>
-                <a class="btn btn-outline-primary btn-lg">Buscar</a>
+        </div>
+        <form class="row g-3" style="display: flex; justify-content: center; align-items: center; position: relative; bottom:11px;">
+            <div class="col-auto" >
+             <label for="LabelBuscar2" class="visually-hidden">Buscar por: </label>
+                <label readonly class="form-control-plaintext" id="LabelBuscar1" value="Buscar por: ">Buscar por:</label>
             </div>
-            <div>
-                <div class="Tabla-Container">
-                    <div>
-                        <table>
-                            <tr>
-                                <input placeholder="CEDULA" />
-                                <input placeholder="NOMBRES"/>
-                            </tr>
-                            <tr>
-                                <input placeholder="APELLIDOS"/>
-                                <input placeholder="SUB"/>
-                            </tr>
-                            <tr>
-                                <input placeholder="MONTO"/>
-                                <input placeholder="FECHA" />
-                            </tr>
-                        </table>
+            <div class="col-auto">
+                <label for="LabelNumber2" class="visually-hidden">Cedula</label>
+                <input type="number" class="form-control" id="inputNumber2" placeholder="Cedula">
+            </div>
+            <div class="col-auto">
+                <label for="LabelNombre2" class="visually-hidden">Nombre</label>
+                <input type="text" class="form-control" id="inputNombre2" placeholder="Nombre">
+            </div>
+            <div class="col-auto">
+                <label for="LabelApellido2" class="visually-hidden">Apellido</label>
+                <input type="text" class="form-control" id="inputApellido2" placeholder="Apellido">
+            </div>
+            <div class="col-auto" style="position: relative; top: 8px;">
+                <button type="submit" class="btn btn-primary mb-3">Buscar</button>
+            </div>
+        </form>
+        <div class="EspacioTabla-Container">
+            <div class="Tabla-Container">
+                <div class="container text-center" style="border: 1px solid black; border-collapse: collapse; border-right: 1px solid black; padding: 15px;" >
+                    <div class="row align-items-start" style="font-size:larger">
+                        <div class="col">
+                            Cedula
+                        </div>
+                        <div class="col">
+                            Nombre
+                        </div>
+                        <div class="col">
+                            Apellido
+                        </div>
+                        <div class="col">
+                            Fecha
+                        </div>
+                        <div class="col">
+                            Motivo
+                        </div>
                     </div>
-
                 </div>
+            </div>
+        </div>
+        <div>
+            <div>
+
             </div>
         </div>
     </div>
