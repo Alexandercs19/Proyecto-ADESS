@@ -1,6 +1,51 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Excluidos";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <div class="Espacio-Container">
+        <div class="BotonCargar-Container">
+        </div>
+        <form class="row g-3" style="display: flex; justify-content: center; align-items: center; position: relative; bottom:11px;">
+            <div class="col-auto">
+                <label for="LabelNumber2" class="visually-hidden">Cedula</label>
+                <input type="number" class="form-control" id="inputNumber2" placeholder="Cedula">
+            </div>
+            <div class="col-auto">
+                <label for="LabelNombre2" class="visually-hidden">Nombre</label>
+                <input type="text" class="form-control" id="inputNombre2" placeholder="Nombre">
+            </div>
+            <div class="col-auto">
+                <label for="LabelApellido2" class="visually-hidden">Apellido</label>
+                <input type="text" class="form-control" id="inputApellido2" placeholder="Apellido">
+            </div>
+            <div class="col-auto" style="position: relative; top: 8px;">
+                <button type="submit" class="btn btn-primary mb-3">Buscar</button>
+            </div>
+            <div class="col-auto" style="position: relative; top: 8px;">
+                <button type="submit" class="btn btn-warning mb-3">Insertar nuevo registro</button>
+            </div>
+            <div class="col-auto" style="position: relative; top: 8px;">
+                <button type="submit" class="btn btn-success mb-3">Generar arhivo .txt</button>
+            </div>
+        </form>
+        <div class="EspacioTabla-Container">
+            <div class="Tabla-Container">
+                <div class="container text-center" style="border: 1px solid black; border-collapse: collapse; border-right: 1px solid black; padding: 15px;">
+                    <div class="row align-items-start" style="font-size:larger">
+                        <div class="col">
+                            Cedula
+                        </div>
+                        <div class="col">
+                            Motivo
+                        </div>
+                        <div class="col">
+                            Fecha
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
