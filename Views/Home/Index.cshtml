@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Add_list
+@{
     ViewData["Title"] = "Inicio";
 }
 
@@ -16,15 +17,15 @@
                 <label readonly class="form-control-plaintext" id="LabelBuscar1" value="Buscar por: ">Buscar por:</label>
             </div>
             <div class="col-auto">
-                <label for="LabelNumber2" class="visually-hidden">Cedula</label>
+                <label asp-for="cedula_add" class="visually-hidden">Cedula</label>
                 <input type="number" class="form-control" id="inputNumber2" placeholder="Cedula">
             </div>
             <div class="col-auto">
-                <label for="LabelNombre2" class="visually-hidden">Nombre</label>
+                <label asp-for="Nombre" class="visually-hidden">Nombre</label>
                 <input type="text" class="form-control" id="inputNombre2" placeholder="Nombre">
             </div>
             <div class="col-auto">
-                <label for="LabelApellido2" class="visually-hidden">Apellido</label>
+                <label asp-for="Apellido" class="visually-hidden">Apellido</label>
                 <input type="text" class="form-control" id="inputApellido2" placeholder="Apellido">
             </div>
             <div class="col-auto" style="position: relative; top: 8px;">
