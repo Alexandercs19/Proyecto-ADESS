@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "P1uTYOd3n1XOQCrA+OWeI36elbaNqHoCS1jj2ntPhTFPPrlKhtfGQqLv5e+892UYWuW6BLCC9sXJpJ/FP/h3/w==",
+  "dgSpecHash": "CH3RHuct/N4eaxZPlHdcNpD+n4w59tlMrYMU7P9L6D4XqSeR13gAPtwz3dIGIBAXePs1iV6r0l+0S4/X4B+oog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tepig\\Desktop\\Proyecto-ADESS\\ProyectoADESS.csproj",
+  "projectFilePath": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\ProyectoADESS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tepig\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Tepig\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -5,8 +5,8 @@ namespace ProyectoADESS.Models
 	{
 		public int Id { get; set; }
 		public string? Cedula { get; set; }
-		public string? Motiov { get; set; }
-		public string? fecha { get; set; }
+		public string? Motivo { get; set; }
+		public string? Fecha { get; set; }
 
 
 	}
