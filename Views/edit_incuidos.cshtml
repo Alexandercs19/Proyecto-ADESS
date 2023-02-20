@@ -10,6 +10,7 @@
     </div>
 </div>
 <form asp-action="Guardar" asp-controller="MantenedorIncluidos" method="post">
+    <input type="hidden" asp-for="Id_add"/>
     <div class="form-group">
         <label class="exampleInputEmail1">Introduzca la Cedula</label>
         <input asp-for="Cedula_add" type="text" class="form-control">
@@ -36,5 +37,6 @@
     </div>
     <button type="submit" class="btn btn-primary">Guardar</button>
     <button class="btn btn-warning" asp-action="Listar">Volver a la lista</button>
+    
 </form>
 

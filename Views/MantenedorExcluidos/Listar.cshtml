@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Excluidos>
+
+@{
+    ViewData["Title"] = "Excluidos";
+}
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <div class="Espacio-Container">
+        <div class="BotonCargar-Container">
+            <div class="col-auto">
+                <input type="file" class="btn btn-outline-info mb-3">Cargar Archivo .txt</">
+            </div>
+        </div>
+        <form asp-controller="MantenedorExcluidos" method="post" class="row g-3" style="display: flex; justify-content: center; align-items: center; position: relative; bottom:11px;">
+            <div class="col-auto">
+                <label for="LabelBuscar2" class="visually-hidden">Buscar por: </label>
+                <label readonly class="form-control-plaintext" id="LabelBuscar1" value="Buscar por: ">Buscar por:</label>
+            </div>
+            <div class="col-auto">
+                <label for="Cedula" class="visually-hidden">Cedula</label>
+                <input type="number" class="form-control" id="inputNumber2" placeholder="Cedula">
+            </div>
+            <div class="col-auto">
+                <label for="Motivo" class="visually-hidden">Fecha</label>
+                <input type="text" class="form-control" id="inputNombre2" placeholder="Motivo">
+            </div>
+            <div class="col-auto">
+                <label for="Fecha" class="visually-hidden">Fecha</label>
+                <input type="text" class="form-control" id="inputApellido2" placeholder="Motivo">
+            </div>
+            <div class="col-auto" style="position: relative; top: 8px;">
+                <button type="submit" class="btn btn-primary mb-3">Buscar</button>
+            </div>
+            <div class="col-auto" style="position: relative; top: 8px;">
+                <button type="submit" class="btn btn-warning mb-3" asp-action="Guardar">Insertar nuevo registro</button>
+            </div>
+            <div class="col-auto" style="position: relative; top: 8px;">
+                <button type="submit" class="btn btn-success mb-3">Generar arhivo .txt</button>
+            </div>
+        </form>
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Cedula</th>
+                            <th>Motivo </th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Cedula</td>
+                                <td>@item.Motivo</td>
+                                <td>@item.Fecha</td>
+                                <td>
+                                    <a asp-action="Editar" asp-controller="MantenedorExcluidos" class="btn btn-outline-success btn-sm" asp-route-id_add="@item.IdExcluidos">Editar</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
