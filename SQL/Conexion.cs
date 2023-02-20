@@ -11,6 +11,7 @@ namespace ProyectoADESS.SQL
 
             CadenaSQL = builder.GetSection("ConnectionStrings:CadenaSQL").Value;
             
+            
         }
 
         public string getCadenaSQL() { 

@@ -12,7 +12,7 @@ build_property.RootNamespace = ProyectoADESS
 build_property.ProjectDir = C:\Users\Tepig\source\repos\ProyectoADESS\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Tepig\source\repos\ProyectoADESS
 build_property._RazorSourceGeneratorDebug = 
 
@@ -22,6 +22,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Tepig/source/repos/ProyectoADESS/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tepig/source/repos/ProyectoADESS/Views/MantenedorIncluidos/Guardar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvckluY2x1aWRvc1xHdWFyZGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tepig/source/repos/ProyectoADESS/Views/MantenedorIncluidos/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvckluY2x1aWRvc1xMaXN0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Tepig/source/repos/ProyectoADESS/Views/Shared/Error.cshtml]
