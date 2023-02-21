@@ -37,6 +37,7 @@ namespace ProyectoADESS.SQL
             }
             return olista;
         }
+
         public Excluidos Obtener(int idApp)
         {
 
@@ -75,7 +76,7 @@ namespace ProyectoADESS.SQL
                 using (var conexionExcluidos = new SqlConnection(cn.getCadenaSQL()))
                 {
                     conexionExcluidos.Open();
-                    SqlCommand cmd = new SqlCommand("sp_GuardarExcluidos", conexionExcluidos);
+                    SqlCommand cmd = new SqlCommand("sp_guardarex", conexionExcluidos);
                     cmd.Parameters.AddWithValue("IdExcluidos", oContactoExcluidos.IdExcluidos);
                     cmd.Parameters.AddWithValue("Cedula", oContactoExcluidos.Cedula);
                     cmd.Parameters.AddWithValue("Motivo", oContactoExcluidos.Motivo);

@@ -7,13 +7,17 @@ namespace ProyectoADESS.Controllers
     public class MantenedorExcluidosController : Controller
     {
         ContactoExcluidos _contactoExcluidos = new ContactoExcluidos();
-        static string cadena_bien = "Data Source(LAPTOP-9QIT7T5H); Initial Catalog =excluidosDB; Integrated Security=true";
+
+        //static string cadena_bien = "data source(laptop-9qit7t5h); initial catalog =excluidosdb; integrated security=true";
         public IActionResult Listar()
         {
             //Listado de los Usuarios
             var oListaExcluidos = _contactoExcluidos.Listar();
             return View(oListaExcluidos);
         }
+
+
+
         public IActionResult Guardar()
         {
             //Para devolver metodo en la vista
@@ -21,13 +25,23 @@ namespace ProyectoADESS.Controllers
         }
         [HttpPost]
 
-        /*public IActionResult Guardar(string cedula, HttpPostedFileBase)
+
+        public IActionResult Guardar(Excluidos oContacto)
         {
             //Para guardar datos en la Base de Datos
 
+            var respuesta = _contactoExcluidos.Guardar(oContacto);
 
+            if (respuesta)
+            {
+                return RedirectToAction("Listar");
+            }
+            else
+            {
+                return View();
+            }
 
-        }*/ 
+        }
 
         [HttpPost]
 

@@ -71,6 +71,7 @@ namespace ProyectoADESS.SQL
             }
             return oContacto;
         }
+
         public bool Guardar(ClassAdd ocontacto)
         {
             bool rpta;
