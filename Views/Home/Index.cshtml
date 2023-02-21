@@ -1,5 +1,22 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Index";
 
 }
 
+<div class="espacio-container">
+    <div class="Encabezado-Container">
+        <div class="Titulo-Container">
+            <div class="Titulo" style="font-size: 45px;text-align:center;">Bienvenido</div>
+            <div class="Subtitulo" style="text-align:center; font-size:25px;">¿Qué desea hacer?</div>
+        </div>
+    </div>
+    <div class="Cuerpo-Container">
+        <div class="Boton-IncluidoContainer">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <a href="/MantenedorIncluidos/Listar" style="text-decoration:none; color:black;"><button class="btn btn-warning btn-lg">Incluidos</a></button>
+                <a href="/MantenedorExcluidos/Listar" style="text-decoration:none; color:black;"><button class="btn btn-success btn-lg">Excluidos</a></button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Formulario para Excluidos";
 }
 
-<div class="card" style="width: 18rem;">
+<div class="card" style="text-align:center; font-size: 25px;">
     <div class="card-header">
         Formulario para Excluidos
     </div>
@@ -22,6 +22,7 @@
         <label class="exampleInputEmail1">Introduzca el Fecha</label>
         <input asp-for="Fecha" type="text" class="form-control">
     </div>
-    <button type="submit" class="btn btn-primary">Guardar</button>
+    <button type="submit" class="btn btn-primary" style="position: relative; top:5px;">Guardar</button>
+    <button class="btn btn-warning" asp-action="Listar" style="position: relative; top:5px;">Volver a la lista</button>
 </form>
 

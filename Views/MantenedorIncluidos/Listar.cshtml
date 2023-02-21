@@ -8,7 +8,7 @@
     <div class="Espacio-Container">
         <div class="BotonCargar-Container">
             <div class="col-auto">
-                <input type="file" class="btn btn-outline-info mb-3">Cargar Archivo .txt</">
+                <input type="file" class="btn btn-secondary mb-3">Cargar Archivo .txt</">
             </div>
         </div>
         <form asp-controller="MantenedorIncluidos" method="post" class="row g-3" style="display: flex; justify-content: center; align-items: center; position: relative; bottom:11px;">
@@ -35,39 +35,11 @@
                 <button type="submit" class="btn btn-warning mb-3" asp-action="Guardar">Insertar nuevo registro</button>
             </div>
             <div class="col-auto" style="position: relative; top: 8px;">
-                <button type="submit" class="btn btn-success mb-3">Generar arhivo .txt</button>
+                <button type="submit" class="btn btn-secondary mb-3">Generar arhivo .txt</button>
             </div>
         </form>
-        @* <div class="EspacioTabla-Container">
-        <div class="Tabla-Container">
-        <div class="container text-center" style="border: 1px solid black; border-collapse: collapse; border-right: 1px solid black; padding: 15px;" >
-        <div class="row align-items-start" style="font-size:larger">
-        <div class="col">
-        <label name="cedula">Cedula</label>
-        </div>
-        <div class="col">
-        <label asp-for="Nombre">Nombre</label>
-        </div>
-        <div class="col">
-        <label asp-for="Apellido">Apellido</label>
-        </div>
-        <div class="col">
-        <label asp-for="Sub">Sub</label>
-        </div>
-        <div class="col">
-        <label asp-for="Monto">Monto</label>
-        </div>
-        <div class="col">
-        <label asp-for="Fecha_add">Fecha</label>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>*@
         <div class="card">
-
             <div class="card-body">
-
                 <table class="table">
                     <thead>
                         <tr>
@@ -77,8 +49,6 @@
                             <th>Sub</th>
                             <th>Monto</th>
                             <th>Fecha</th>
-
-
                         </tr>
                     </thead>
                     <tbody>
@@ -92,17 +62,15 @@
                                 <td>@item.Monto</td>
                                 <td>@item.Fecha_add</td>
                                 <td>
-                                    <a asp-action="Editar" asp-controller="MantenedorIncluidos" class="btn btn-outline-success btn-sm" asp-route-id_add="@item.Id_add">Editar</a>
-                                    <a asp-action="Eliminar" asp-controller="MantenedorIncluidos" class="btn btn-outline-success btn-sm" asp-route-id_add="@item.Id_add">Eliminar</a>
+                                    <a asp-action="Editar" asp-controller="MantenedorIncluidos" class="btn btn-success btn-sm" asp-route-id_add="@item.Id_add">Editar</a>
+                                    <a asp-action="Eliminar" asp-controller="MantenedorIncluidos" class="btn btn-danger btn-sm" asp-route-id_add="@item.Id_add">Eliminar</a>
                                 </td>
-
                             </tr>
                         }
                     </tbody>
-
                 </table>
-
             </div>
+            <a href="/Home/index" style="text-decoration:none; text-decoration:none; position: relative; bottom:5px;"><button class="btn btn-warning">Volver al menu principal</button></a>
         </div>
     </div>
 </div>
