@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "BDBxoDUz1Hk8rI59EAGZUh/WAscGEMp9jaYwyB5yZlJ/owcOFU07xPMFEEYWr6ySW53RuJObBrUWqfvS9Z1oRA==",
+  "dgSpecHash": "jDmt+XpumTN0hpPtF7pB8McSso7lZTZ32TmDo9mguEvzxAV5havI75Y6PYcqCft/em2101XKNS0IDJSgsUWzyw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\ProyectoADESS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Tepig\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\Tepig\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\Tepig\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\Tepig\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Tepig\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.0\\microsoft.aspnetcore.mvc.razor.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Tepig\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\7.0.3\\microsoft.aspnetcore.mvc.razor.runtimecompilation.7.0.3.nupkg.sha512",

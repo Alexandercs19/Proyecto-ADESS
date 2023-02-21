@@ -28,6 +28,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Tepig/source/repos/ProyectoADESS/Views/MantenedorExcluidos/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvckV4Y2x1aWRvc1xFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tepig/source/repos/ProyectoADESS/Views/MantenedorExcluidos/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvckV4Y2x1aWRvc1xFbGltaW5hci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Tepig/source/repos/ProyectoADESS/Views/MantenedorExcluidos/Guardar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuZWRvckV4Y2x1aWRvc1xHdWFyZGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

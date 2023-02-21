@@ -1654,3 +1654,6 @@ C:\Users\Tepig\Desktop\Proyecto-ADESS\obj\Debug\net7.0\scopedcss\projectbundle\P
 C:\Users\Tepig\Desktop\Proyecto-ADESS\obj\Debug\net7.0\ProyectoADESS.csproj.CopyComplete
 C:\Users\Tepig\Desktop\Proyecto-ADESS\obj\Debug\net7.0\ProyectoADESS.genruntimeconfig.cache
 C:\Users\Tepig\Desktop\Proyecto-ADESS\obj\Debug\net7.0\ref\ProyectoADESS.dll
+C:\Users\Tepig\source\repos\ProyectoADESS\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\Tepig\source\repos\ProyectoADESS\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+C:\Users\Tepig\source\repos\ProyectoADESS\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll

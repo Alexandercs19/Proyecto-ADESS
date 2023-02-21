@@ -43,18 +43,42 @@ namespace ProyectoADESS.Controllers
 
         }
 
-        [HttpPost]
-
         public IActionResult Editar(int IdExcluidos)
         {
+            //Para devolver metodo a la vista
             var ocontacto = _contactoExcluidos.Obtener(IdExcluidos);
             return View(ocontacto);
 
 
         }
-        public IActionResult Editar(Excluidos oid_add)
+        [HttpPost]
+        public IActionResult Editar(Excluidos oid_ad)
         {
-            var respuesta = _contactoExcluidos.Editar(oid_add);
+            //Para editar los datos tanto como en la BD como en la vista
+            var respuesta = _contactoExcluidos.Editar(oid_ad);
+
+            if (respuesta)
+            {
+                return RedirectToAction("Listar");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public IActionResult Eliminar(int Id_add)
+        {
+            //Para devolver el metodo a la vista
+            var ocontacto = _contactoExcluidos.Obtener(Id_add);
+            return View(ocontacto);
+
+
+        }
+        [HttpPost]
+        public IActionResult Eliminar(Excluidos oid_add)
+        {
+            //Para eliminar los datos tanto como en la BD como en la vista
+            var respuesta = _contactoExcluidos.Eliminar(oid_add.IdExcluidos);
 
             if (respuesta)
             {

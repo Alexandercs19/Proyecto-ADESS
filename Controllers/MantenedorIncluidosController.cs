@@ -22,10 +22,15 @@ namespace ProyectoADESS.Controllers
             //Para devolver metodo en la vista
             return View();
         }
+
         [HttpPost]
         public IActionResult Guardar(ClassAdd oContacto)
         {
             //Para guardar datos en la Base de Datos
+            if (!ModelState.IsValid)
+            {
+                return View(oContacto);
+            }
 
             var respuesta = _Contacto.Guardar(oContacto);
 
@@ -33,14 +38,15 @@ namespace ProyectoADESS.Controllers
             {
                 return RedirectToAction("Listar");
             }
-            else 
+            else
             {
                 return View();
             }
-            
+
         }
-        public IActionResult Editar (int Id_add)
+        public IActionResult Editar(int Id_add)
         {
+            //Para devolver metodo a la vista
             var ocontacto = _Contacto.Obtener(Id_add);
             return View(ocontacto);
 
@@ -49,6 +55,7 @@ namespace ProyectoADESS.Controllers
         [HttpPost]
         public IActionResult Editar(ClassAdd oid_add)
         {
+            //Para editar los datos tanto como en la BD como en la vista
             var respuesta = _Contacto.Editar(oid_add);
 
             if (respuesta)
@@ -62,6 +69,7 @@ namespace ProyectoADESS.Controllers
         }
         public IActionResult Eliminar(int Id_add)
         {
+            //Para devolver el metodo a la vista
             var ocontacto = _Contacto.Obtener(Id_add);
             return View(ocontacto);
 
@@ -70,6 +78,7 @@ namespace ProyectoADESS.Controllers
         [HttpPost]
         public IActionResult Eliminar(ClassAdd oid_add)
         {
+            //Para eliminar los datos tanto como en la BD como en la vista
             var respuesta = _Contacto.Eliminar(oid_add.Id_add);
 
             if (respuesta)
@@ -79,6 +88,30 @@ namespace ProyectoADESS.Controllers
             else
             {
                 return View();
+            }
+        }
+
+        [HttpPost]
+        public IActionResult SubirArchivo(IFormFile archivoTXT)
+        {
+            if (archivoTXT != null && archivoTXT.Length > 0)
+            {
+                // Lee el contenido del archivo
+                using (var reader = new StreamReader(archivoTXT.OpenReadStream()))
+                {
+                    var contenido = reader.ReadToEnd();
+
+                    // Procesa el contenido del archivo
+                    // ...
+
+                    // Retorna una respuesta exitosa
+                    return Ok();
+                }
+            }
+            else
+            {
+
+                return View("Listar");
             }
         }
     }

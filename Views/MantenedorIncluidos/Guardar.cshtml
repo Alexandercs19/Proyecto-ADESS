@@ -9,32 +9,46 @@
         Formulario para Incluidos
     </div>
 </div>
-<form asp-action="Guardar" asp-controller="MantenedorIncluidos" method="post">
+<div class="card-body">
+<form asp-action="Guardar" >
+    <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
     <div class="form-group">
-        <label class="exampleInputEmail1">Introduzca la Cedula</label>
+        <label asp-for="Cedula_add">Introduzca la Cedula</label>
         <input asp-for="Cedula_add" type="text" class="form-control">
+        <span asp-validation-for="Cedula_add" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label class="exampleInputEmail1">Introduzca el Apellido</label>
+        <label asp-for="Apellido">Introduzca el Apellido</label>
         <input asp-for="Apellido" type="text" class="form-control">
+        <span asp-validation-for="Apellido" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label class="exampleInputEmail1">Introduzca el Nombre</label>
+        <label asp-for="Nombre">Introduzca el Nombre</label>
         <input asp-for="Nombre" type="text" class="form-control">
+        <span asp-validation-for="Nombre" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label class="exampleInputEmail1">Introduzca el SUB</label>
+        <label asp-for="Sub">Introduzca el SUB</label>
         <input asp-for="Sub" type="text" class="form-control">
+        <span asp-validation-for="Sub" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label class="exampleInputEmail1">Introduzca el Monto</label>
+        <label asp-for="Monto" >Introduzca el Monto</label>
         <input asp-for="Monto" type="text" class="form-control">
+        <span asp-validation-for="Monto" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label class="exampleInputEmail1">Introduzca la Fecha</label>
+        <label asp-for="Fecha_add">Introduzca la Fecha</label>
         <input asp-for="Fecha_add" type="text" class="form-control">
+        <span asp-validation-for="Fecha_add" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary" style="text-decoration:none; position: relative; top:5px;">Guardar</button>
     <button class="btn btn-warning" asp-action="Listar" style="text-decoration:none; position: relative; top:5px;">Volver a la lista</button>
 </form>
+</div>
 
+@section Scripts{
+
+    <partial name="_ValidationScriptsPartial" />
+
+}

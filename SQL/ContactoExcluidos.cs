@@ -37,7 +37,6 @@ namespace ProyectoADESS.SQL
             }
             return olista;
         }
-
         public Excluidos Obtener(int idApp)
         {
 
@@ -49,7 +48,7 @@ namespace ProyectoADESS.SQL
             {
                 conexionExcluidos.Open();
                 SqlCommand cmd = new SqlCommand("sp_ObtenerExcluidos", conexionExcluidos);
-                cmd.Parameters.AddWithValue("id", idApp);
+                cmd.Parameters.AddWithValue("IdExcluidos", idApp);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var dr = cmd.ExecuteReader())
@@ -107,11 +106,11 @@ namespace ProyectoADESS.SQL
                 using (var conexionExcluidos = new SqlConnection(cn.getCadenaSQL()))
                 {
                     conexionExcluidos.Open();
-                    SqlCommand cmd = new SqlCommand("sp_EditarExcluidos", conexionExcluidos);
+                    SqlCommand cmd = new SqlCommand("sp_editarex", conexionExcluidos);
                     cmd.Parameters.AddWithValue("IdExcluidos", ocontacto.IdExcluidos);
                     cmd.Parameters.AddWithValue("Cedula", ocontacto.Cedula);
-                    cmd.Parameters.AddWithValue("Motivo", ocontacto.Fecha);
-                    cmd.Parameters.AddWithValue("Fecha", ocontacto.Motivo);
+                    cmd.Parameters.AddWithValue("Motivo", ocontacto.Motivo);
+                    cmd.Parameters.AddWithValue("Fecha", ocontacto.Fecha);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }
