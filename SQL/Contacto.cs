@@ -52,7 +52,7 @@ namespace ProyectoADESS.SQL
             {
                 conexion.Open();
                 SqlCommand cmd = new SqlCommand("sp_Obtener", conexion);
-                cmd.Parameters.AddWithValue("id", idApp);
+                cmd.Parameters.AddWithValue("id_add", idApp);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var dr = cmd.ExecuteReader())
@@ -65,7 +65,7 @@ namespace ProyectoADESS.SQL
                         oContacto.Sub = dr["Sub"].ToString();
                         oContacto.Monto = dr["Monto"].ToString();
                         oContacto.Fecha_add = dr["Fecha_add"].ToString();
-                        oContacto.Id_add = Convert.ToInt32(dr["Id_add"]);
+                        oContacto.Id_add = Convert.ToInt32(dr["id_add"]);
                     }
                 }
             }

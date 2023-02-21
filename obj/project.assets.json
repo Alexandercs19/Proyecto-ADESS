@@ -9495,11 +9495,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tepig\\Desktop\\Proyecto-ADESS\\ProyectoADESS.csproj",
+      "projectUniqueName": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\ProyectoADESS.csproj",
       "projectName": "ProyectoADESS",
-      "projectPath": "C:\\Users\\Tepig\\Desktop\\Proyecto-ADESS\\ProyectoADESS.csproj",
+      "projectPath": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\ProyectoADESS.csproj",
       "packagesPath": "C:\\Users\\Tepig\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tepig\\Desktop\\Proyecto-ADESS\\obj\\",
+      "outputPath": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l7je3ffECKXhtNl/jtkiYmQYgtSgfZ5lkaksthND2j7mSaI+RdOsMzSHdxbYMz5Ve9QqFWp2yYFRod7+rwZLcQ==",
+  "dgSpecHash": "BDBxoDUz1Hk8rI59EAGZUh/WAscGEMp9jaYwyB5yZlJ/owcOFU07xPMFEEYWr6ySW53RuJObBrUWqfvS9Z1oRA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tepig\\Desktop\\Proyecto-ADESS\\ProyectoADESS.csproj",
+  "projectFilePath": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\ProyectoADESS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tepig\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Tepig\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.0\\microsoft.aspnetcore.mvc.razor.extensions.6.0.0.nupkg.sha512",

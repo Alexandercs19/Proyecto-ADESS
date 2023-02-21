@@ -50,7 +50,8 @@
                                 <td>@item.Motivo</td>
                                 <td>@item.Fecha</td>
                                 <td>
-                                    <a asp-action="Editar" asp-controller="MantenedorExcluidosController" class="btn btn-outline-success btn-sm" asp-route-id_add="@item.IdExcluidos">Editar</a>
+                                    <a asp-action="Editar" asp-controller="MantenedorExcluidosController" class="btn btn-success btn-sm" asp-route-id_add="@item.IdExcluidos">Editar</a>
+                                    <a asp-action="Eliminar" asp-controller="MantenedorExcluidosController" class="btn btn-danger btn-sm" asp-route-id_add="@item.IdExcluidos">Eliminar</a>
                                 </td>
                             </tr>
                         }

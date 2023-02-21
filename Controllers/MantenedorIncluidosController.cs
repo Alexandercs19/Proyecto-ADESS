@@ -39,8 +39,6 @@ namespace ProyectoADESS.Controllers
             }
             
         }
-        [HttpPost]
-
         public IActionResult Editar (int Id_add)
         {
             var ocontacto = _Contacto.Obtener(Id_add);
@@ -48,9 +46,31 @@ namespace ProyectoADESS.Controllers
 
 
         }
+        [HttpPost]
         public IActionResult Editar(ClassAdd oid_add)
         {
             var respuesta = _Contacto.Editar(oid_add);
+
+            if (respuesta)
+            {
+                return RedirectToAction("Listar");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        public IActionResult Eliminar(int Id_add)
+        {
+            var ocontacto = _Contacto.Obtener(Id_add);
+            return View(ocontacto);
+
+
+        }
+        [HttpPost]
+        public IActionResult Eliminar(ClassAdd oid_add)
+        {
+            var respuesta = _Contacto.Eliminar(oid_add.Id_add);
 
             if (respuesta)
             {

@@ -1,0 +1,20 @@
+﻿@model ClassAdd
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card" style="text-align:center; font-size: 25px;">
+    <div class="card-header">
+        Formulario para Incluidos
+    </div>
+</div>
+<form asp-action="Eliminar" asp-controller="MantenedorIncluidos" method="post">
+    <input asp-for="Id_add" type="hidden" class="form-control">
+    <div class="alert alert-danger" role="alert">
+        ¿Deseas eliminar el usuario: @Html.DisplayTextFor(m =>m.Nombre)
+    </div>
+    <button type="submit" class="btn btn-danger" style="text-decoration:none; position: relative; top:5px;">Eliminar</button>
+    <button class="btn btn-warning" asp-action="Listar" style="text-decoration:none; position: relative; top:5px;">Volver a la lista</button>
+</form>
+
