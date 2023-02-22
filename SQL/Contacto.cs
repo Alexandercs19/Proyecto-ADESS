@@ -5,11 +5,13 @@ using Microsoft.AspNetCore.SignalR;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Threading;
 
+
 namespace ProyectoADESS.SQL
 {
     public class Contacto
     {
-       
+
+
         public List<ClassAdd> Listar() { 
         
                 var olista = new List<ClassAdd>();

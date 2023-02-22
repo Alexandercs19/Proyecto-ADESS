@@ -1,25 +1,13 @@
-﻿@model IEnumerable<ClassAdd>
+﻿@model IEnumerable<ClassAdd> 
+
+
 @{
     ViewData["Title"] = "Incluidos";
 }
 
 
-<form method="post" enctype="multipart/form-data">
 
-<div class="text-center">
-    <h1 class="display-4">@ViewData["Title"]</h1>
-    
-    <div class="Espacio-Container">
-        <div class="BotonCargar-Container">
-            <div class="col-auto">
-                <input type="file" class="btn btn-secondary mb-3" name="archivoTXT">Cargar Archivo .txt</">
-                <button type="submit">Subir archivo</button>
-            </div>
-        </div>
-    </div>
-</div>
-    </form>
-        <form asp-controller="MantenedorIncluidos" method="post" class="row g-3" style="display: flex; justify-content: center; align-items: center; position: relative; bottom:11px;">
+        <form asp-controller="MantenedorIncluidos" method="post" class="row g-3" style="display: flex; justify-content: center; align-items: center; position: relative; bottom:11px;" asp-action="" asp-controller="" enctype="multipart/form-data">
             <div class="col-auto">
                 <label for="LabelBuscar2" class="visually-hidden">Buscar por: </label>
                 <label readonly class="form-control-plaintext" id="LabelBuscar1" value="Buscar por: ">Buscar por:</label>

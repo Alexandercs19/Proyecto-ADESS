@@ -13,7 +13,9 @@ namespace ProyectoADESS.Controllers
 
         public IActionResult Listar()
         {
+            unicoArchivo model = new unicoArchivo();
             //Listado de los Usuarios
+
             var oLista = _Contacto.Listar();
             return View(oLista);
         }
@@ -28,9 +30,7 @@ namespace ProyectoADESS.Controllers
         {
             //Para guardar datos en la Base de Datos
             if (!ModelState.IsValid)
-            {
-                return View(oContacto);
-            }
+                return View();
 
             var respuesta = _Contacto.Guardar(oContacto);
 
@@ -91,28 +91,7 @@ namespace ProyectoADESS.Controllers
             }
         }
 
-        [HttpPost]
-        public IActionResult SubirArchivo(IFormFile archivoTXT)
-        {
-            if (archivoTXT != null && archivoTXT.Length > 0)
-            {
-                // Lee el contenido del archivo
-                using (var reader = new StreamReader(archivoTXT.OpenReadStream()))
-                {
-                    var contenido = reader.ReadToEnd();
+        
 
-                    // Procesa el contenido del archivo
-                    // ...
-
-                    // Retorna una respuesta exitosa
-                    return Ok();
-                }
-            }
-            else
-            {
-
-                return View("Listar");
-            }
-        }
     }
 }

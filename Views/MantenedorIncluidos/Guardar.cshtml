@@ -10,12 +10,13 @@
     </div>
 </div>
 <div class="card-body">
-<form asp-action="Guardar" >
+
+<form asp-action="Guardar" asp->
     <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
     <div class="form-group">
         <label asp-for="Cedula_add">Introduzca la Cedula</label>
         <input asp-for="Cedula_add" type="text" class="form-control">
-        <span asp-validation-for="Cedula_add" class="text-danger"></span>
+            <span asp-validation-for="Cedula_add" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Apellido">Introduzca el Apellido</label>
@@ -43,8 +44,8 @@
         <span asp-validation-for="Fecha_add" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary" style="text-decoration:none; position: relative; top:5px;">Guardar</button>
-    <button class="btn btn-warning" asp-action="Listar" style="text-decoration:none; position: relative; top:5px;">Volver a la lista</button>
-</form>
+        <a href="/MantenedorIncluidos/Listar" style="text-decoration:none; position: relative; top:5px;" class="btn btn-warning">Volver a la lista</a>
+    </form>
 </div>
 
 @section Scripts{
