@@ -24,6 +24,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=SubirArchivo}/{action=Subir}/{id?}");
+    pattern: "{controller=SubirArchivo}/{action=SubirArchivo}/{id?}");
 
 app.Run();

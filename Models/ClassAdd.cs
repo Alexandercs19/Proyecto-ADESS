@@ -28,12 +28,10 @@ namespace ProyectoADESS.Models
         public string Fecha_add { get; set; }
         public int Id_add { get; set; }
 
-        public string Message { get; set; }
-        public bool Subido { get; set; }
-        public bool IsResponse { get; set; }
+        public IFormFile Archivo { get; set; }
+        public string Extension { get; set; }
 
-        public string Nombrearchivo { get; set; }
-        public IFormFile archivo { get; set; }
+
     }
 }
 

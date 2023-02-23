@@ -4,7 +4,7 @@ using System.Data;
 using Microsoft.AspNetCore.SignalR;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Threading;
-
+using Microsoft.AspNetCore.Mvc;
 
 namespace ProyectoADESS.SQL
 {
