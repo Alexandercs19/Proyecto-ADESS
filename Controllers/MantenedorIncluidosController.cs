@@ -10,10 +10,9 @@ namespace ProyectoADESS.Controllers
     {
 
         Contacto _Contacto = new Contacto();
-
         public IActionResult Listar()
         {
-            unicoArchivo model = new unicoArchivo();
+            //unicoArchivo model = new unicoArchivo();
             //Listado de los Usuarios
 
             var oLista = _Contacto.Listar();
