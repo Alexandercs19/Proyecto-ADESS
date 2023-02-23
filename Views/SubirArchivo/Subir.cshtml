@@ -1,0 +1,30 @@
+﻿@model ClassAdd
+@{
+    ViewData["Title"] = "Subir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+   <div class="col-sm-12">
+        <div class="panel panel-primary" style="margin-top:50px;">
+        <div class="panel-heading">
+            <h4>Cargar Archivo</h4>
+        </div>
+        <div class="panel-body">
+            <form>
+                    <div class="form-group" style="margin:15px;">
+                    <label>Nombre del Archivo:</label>
+                    <input class="form-control" name="Nombre" type="text" autocomplete="off"/>
+                </div>
+                    <div class="form-group1" style="margin:15px;">
+                    <label>Archivo:</label>
+                    <input name="Archivo" type="file"/>
+                </div>
+                <button class="btn btn-success" type="submit">Subir Archivo</button>
+                    <a class="btn btn-warning" href="@Url.Action("Subir","Archivo")">Volver</a>
+            </form>
+        </div>
+        </div> 
+   </div>
+</div>
+
