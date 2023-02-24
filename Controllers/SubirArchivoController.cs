@@ -9,6 +9,7 @@ using System.Net.Mail;
 using Microsoft.AspNetCore.SignalR;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using ProyectoADESS.SQL;
+using System.Reflection;
 
 namespace ProyectoADESS.Controllers
 {
@@ -27,25 +28,26 @@ namespace ProyectoADESS.Controllers
         }
 
         [HttpPost]
-        public ActionResult SubirArchivo(ClassAdd classAdd)
+        public ActionResult SubirArchivo(add_list Ad_listado)
         {
            
-            string Extension = Path.GetExtension(classAdd.Archivo.FileName);
+            string Extension = Path.GetExtension(Ad_listado.Archivo.FileName);
 
             MemoryStream ms = new MemoryStream();
-            classAdd.Archivo.CopyTo(ms);
+            Ad_listado.Archivo.CopyTo(ms);
             byte[] data = ms.ToArray();
             //Attachment.CreateAttachmentFromString
             using (SqlConnection oconexion = new SqlConnection(cadena))
 
-            { 
+            {
+                                
                 SqlCommand cmd = new SqlCommand("SP_guardarsubidos", oconexion);
-                cmd.Parameters.AddWithValue("@cedula_add", classAdd.Cedula_add);
-                cmd.Parameters.AddWithValue("@apellido", classAdd.Apellido);
-                cmd.Parameters.AddWithValue("@nombre", classAdd.Nombre);
-                cmd.Parameters.AddWithValue("@sub", classAdd.Sub);
-                cmd.Parameters.AddWithValue("@monto", classAdd.Monto);
-                cmd.Parameters.AddWithValue("@fecha_add", classAdd.Fecha_add);
+                cmd.Parameters.AddWithValue("@cedula_add", Ad_listado.Cedula_add);
+                cmd.Parameters.AddWithValue("@apellido", Ad_listado.Apellido);
+                cmd.Parameters.AddWithValue("@nombre", Ad_listado.Nombre);
+                cmd.Parameters.AddWithValue("@sub", Ad_listado.Sub);
+                cmd.Parameters.AddWithValue("@monto", Ad_listado.Monto);
+                cmd.Parameters.AddWithValue("@fecha_add", Ad_listado.Fecha_add);
                 cmd.Parameters.AddWithValue("@archivo", data);
                 cmd.Parameters.AddWithValue("@extension", Extension);
                 cmd.CommandType = CommandType.Text;

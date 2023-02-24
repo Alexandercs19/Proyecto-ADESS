@@ -107,6 +107,8 @@ namespace ProyectoADESS.SQL
 
             return rpta;
         }
+
+
         public bool Editar(ClassAdd ocontacto)
         {
             bool rpta;
