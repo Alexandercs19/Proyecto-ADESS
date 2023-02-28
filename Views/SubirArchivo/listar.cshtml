@@ -1,0 +1,80 @@
+﻿@model List<ClassAdd>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="card">
+        <form asp-action="listar" asp-controller="SubirArchivo" method="post" enctype="multipart/form-data">
+            <div class="card-header">
+                <h1 class="card-title">Selector de Archivo</h1>
+            </div>
+            <div class="card-body">
+
+
+
+                <div class="form-group">
+                    <label for="Archivo" class="form-label">Archivo</label>
+                    <input id="fileInput" class="form-control" name="Archivo" accept=".txt" type="file" />
+                </div>
+
+
+            </div>
+            <div class="card-footer d-flex justify-content-start">
+                <button type="submit" class="btn btn-success">Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<br />
+@if(Model != null && Model.Count > 0)
+{
+
+
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                        <th scope="col">Cedula</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Sub</th>
+                        <th scope="col">Monto</th>
+                        <th scope="col">Fecha</th>
+                    </tr>
+            </thead>
+
+            <tbody id="tblbody">
+                @foreach(var registro in Model)
+                {
+                   <tr>
+                            <td>
+                                @registro.Cedula_add
+                            </td>
+                            <td>
+                                @registro.Nombre
+                            </td>
+                            <td>
+                                @registro.Apellido
+                            </td>
+                            <td>
+                                @registro.Sub
+                            </td>
+                            <td>
+                                @registro.Monto
+                            </td>
+                            <td>
+                                @registro.Fecha_add
+                            </td>
+
+                            
+                        </tr> 
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+}
