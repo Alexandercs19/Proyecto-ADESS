@@ -73,15 +73,34 @@ namespace ProyectoADESS.Controllers
                     if (list.Count() == 0)
                     {
                         string cedula = linea.Substring(0, 11);
+                        string apellido = linea.Substring(11);
                         string nombre = linea.Substring(11);
 
                         int currentNombre = 0;
+                        string PrimerApellido = "";
+                        string SegundoApellido = "";
                         string PrimerNombre = "";
                         string SegundoNombre = "";
 
-
-                        for (int i = 0; i < nombre.Length; i++)
+                        for (int i = 0; i < apellido.Length; i++)
                         {
+                            if (apellido[i].ToString() == apellido[i].ToString().ToUpper() && i == 0)
+                            {
+                                currentNombre = 1;
+                            }
+                            if (apellido[i].ToString() == apellido[i].ToString().ToUpper() && i > 1)
+                            {
+                                currentNombre = 2;
+                            }
+                            if(currentNombre == 1)
+                            {
+                                PrimerApellido += apellido[i];
+                            }
+                            else
+                            {
+                                SegundoApellido += apellido[i];
+                            }
+
                             if (nombre[i].ToString() == nombre[i].ToString().ToUpper() && i == 0)
                             {
                                 currentNombre = 1;
@@ -90,17 +109,20 @@ namespace ProyectoADESS.Controllers
                             {
                                 currentNombre = 2;
                             }
-                            if(currentNombre == 1)
+                            if (currentNombre == 1)
                             {
                                 PrimerNombre += nombre[i];
                             }
                             else
                             {
-                                SegundoNombre+= nombre[i];
+                                SegundoNombre += nombre[i];
                             }
+
                         }
+                        
 
                         list.Add(cedula);
+                        list.Add(PrimerApellido + " " + SegundoApellido);
                         list.Add(PrimerNombre + " " + SegundoNombre);
                     }
                     else
@@ -112,7 +134,7 @@ namespace ProyectoADESS.Controllers
 
             string monto, fecha, sub;
             sub = list[3].Substring(0, 4); 
-            monto = list[3].Substring(5, 8);
+            monto = list[3].Substring(4, 8);
             fecha = list[3].Substring(9);
 
             registro.Cedula_add = list[0];
