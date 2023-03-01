@@ -172,5 +172,39 @@ namespace ProyectoADESS.SQL
         {
             throw new NotImplementedException();
         }
+
+        public bool Guardarsubidos(ClassAdd registro)
+        {
+            bool rpta;
+
+            try
+            {
+                var cn = new Conexion();
+
+                using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("sp_Guardar", conexion);
+                    cmd.Parameters.AddWithValue("cedula_add", registro.Cedula_add);
+                    cmd.Parameters.AddWithValue("apellido", registro.Apellido);
+                    cmd.Parameters.AddWithValue("nombre", registro.Nombre);
+                    cmd.Parameters.AddWithValue("sub", registro.Sub);
+                    cmd.Parameters.AddWithValue("monto", registro.Monto);
+                    cmd.Parameters.AddWithValue("fecha_add", registro.Fecha_add);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+                }
+                rpta = true;
+
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message;
+                rpta = false;
+            }
+
+
+            return rpta;
+        }
     }
 }

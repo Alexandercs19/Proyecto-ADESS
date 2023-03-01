@@ -1674,3 +1674,13 @@ C:\Users\PC-RICARDO\repos\Proyecto-ADESS\bin\Debug\net7.0\runtimes\linux-x64\nat
 C:\Users\PC-RICARDO\repos\Proyecto-ADESS\bin\Debug\net7.0\runtimes\osx-x64\native\libgrpc_csharp_ext.x64.dylib
 C:\Users\PC-RICARDO\repos\Proyecto-ADESS\bin\Debug\net7.0\runtimes\win-x64\native\grpc_csharp_ext.x64.dll
 C:\Users\PC-RICARDO\repos\Proyecto-ADESS\bin\Debug\net7.0\runtimes\win-x86\native\grpc_csharp_ext.x86.dll
+C:\Users\Tepig\Desktop\Proyecto-ADESS\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\Tepig\Desktop\Proyecto-ADESS\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+C:\Users\Tepig\Desktop\Proyecto-ADESS\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Tepig\Desktop\Proyecto-ADESS\bin\Debug\net7.0\Grpc.Core.dll
+C:\Users\Tepig\Desktop\Proyecto-ADESS\bin\Debug\net7.0\Grpc.Core.Api.dll
+C:\Users\Tepig\Desktop\Proyecto-ADESS\bin\Debug\net7.0\runtimes\linux-arm64\native\libgrpc_csharp_ext.arm64.so
+C:\Users\Tepig\Desktop\Proyecto-ADESS\bin\Debug\net7.0\runtimes\linux-x64\native\libgrpc_csharp_ext.x64.so
+C:\Users\Tepig\Desktop\Proyecto-ADESS\bin\Debug\net7.0\runtimes\osx-x64\native\libgrpc_csharp_ext.x64.dylib
+C:\Users\Tepig\Desktop\Proyecto-ADESS\bin\Debug\net7.0\runtimes\win-x64\native\grpc_csharp_ext.x64.dll
+C:\Users\Tepig\Desktop\Proyecto-ADESS\bin\Debug\net7.0\runtimes\win-x86\native\grpc_csharp_ext.x86.dll

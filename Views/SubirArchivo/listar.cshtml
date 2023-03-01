@@ -1,4 +1,4 @@
-﻿@model List<ClassAdd>
+﻿@model IList<ClassAdd>
 
 @{
     ViewData["Title"] = "Home Page";
@@ -38,8 +38,8 @@
             <thead>
                 <tr>
                         <th scope="col">Cedula</th>
-                        <th scope="col">Nombres</th>
                         <th scope="col">Apellidos</th>
+                        <th scope="col">Nombres</th>
                         <th scope="col">Sub</th>
                         <th scope="col">Monto</th>
                         <th scope="col">Fecha</th>
@@ -54,10 +54,10 @@
                                 @registro.Cedula_add
                             </td>
                             <td>
-                                @registro.Nombre
+                                @registro.Apellido
                             </td>
                             <td>
-                                @registro.Apellido
+                                @registro.Nombre
                             </td>
                             <td>
                                 @registro.Sub
