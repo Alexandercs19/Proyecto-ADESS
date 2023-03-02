@@ -8,15 +8,33 @@ namespace ProyectoADESS.Controllers
     {
         ContactoExcluidos _contactoExcluidos = new ContactoExcluidos();
 
-        //static string cadena_bien = "data source(laptop-9qit7t5h); initial catalog =excluidosdb; integrated security=true";
+        public IActionResult Buscar(string cedula, string motivo, string fecha)
+        {
+            var usuarios = from Contacto in _contactoExcluidos.Listar() select Contacto;
+
+            if (!String.IsNullOrEmpty(cedula))
+            {
+                usuarios = usuarios.Where(s => s.Cedula!.Contains(cedula));
+            }
+            if (!String.IsNullOrEmpty(motivo))
+            {
+                usuarios = usuarios.Where(s => s.Motivo!.Contains(motivo));
+            }
+            if (!String.IsNullOrEmpty(fecha))
+            {
+                usuarios = usuarios.Where(s => s.Fecha!.Contains(fecha));
+            }
+
+            return View(usuarios.ToList());
+
+        }
+
         public IActionResult Listar()
         {
             //Listado de los Usuarios
             var oListaExcluidos = _contactoExcluidos.Listar();
             return View(oListaExcluidos);
         }
-
-
 
         public IActionResult Guardar()
         {

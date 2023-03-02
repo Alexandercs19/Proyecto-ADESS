@@ -1,0 +1,26 @@
+﻿@model ClassAdd
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-primary" style="margin-top:50px;">
+            <div class="panel-heading">
+                <h4>Cargar Archivo</h4>
+            </div>
+            <div class="panel-body">
+                <form asp-action="SubirArchivo" enctype="multipart/form-data">
+                    <div class="form-group" style="margin:15px;">
+                        <label>Nombre del Archivo:</label>
+                        <input class="form-control" name="NombreArchivo" type="text" autocomplete="off" />
+                    </div>
+                    <div class="form-group" style="margin:15px;">
+                        <label>Archivo:</label>
+                        <input asp-for="Archivo" type="file" />
+                    </div>
+                    <button class="btn btn-success">Subir Archivo</button>
+                    <a class="btn btn-warning" href="/MantenedorIncluidos/Listar">Volver</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

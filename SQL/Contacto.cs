@@ -12,11 +12,12 @@ namespace ProyectoADESS.SQL
     {
 
 
-        public List<ClassAdd> Listar() { 
-        
-                var olista = new List<ClassAdd>();
+        public List<ClassAdd> Listar()
+        {
 
-                var cn = new Conexion();
+            var olista = new List<ClassAdd>();
+
+            var cn = new Conexion();
 
             using (var conexion = new SqlConnection(cn.getCadenaSQL()))
             {
@@ -95,10 +96,10 @@ namespace ProyectoADESS.SQL
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }
-                rpta= true;
+                rpta = true;
 
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 string error = ex.Message;
                 rpta = false;

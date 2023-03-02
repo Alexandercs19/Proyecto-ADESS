@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
 using ProyectoADESS.SQL;
 using ProyectoADESS.Models;
+using System;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace ProyectoADESS.Controllers
@@ -10,11 +11,29 @@ namespace ProyectoADESS.Controllers
     {
 
         Contacto _Contacto = new Contacto();
+
+        public IActionResult Buscar(string cedula, string nombre, string apellido)
+        {
+            var usuarios = from Contacto in _Contacto.Listar() select Contacto;
+
+            if (!String.IsNullOrEmpty(cedula))
+            {
+                usuarios = usuarios.Where(s => s.Cedula_add!.Contains(cedula));
+            }
+            if (!String.IsNullOrEmpty(nombre))
+            {
+                usuarios = usuarios.Where(s => s.Nombre!.Contains(nombre));
+            }
+            if (!String.IsNullOrEmpty(apellido))
+            {
+                usuarios = usuarios.Where(s => s.Apellido!.Contains(apellido));
+            }
+
+            return View(usuarios.ToList());
+
+        }
         public IActionResult Listar()
         {
-            //unicoArchivo model = new unicoArchivo();
-            //Listado de los Usuarios
-
             var oLista = _Contacto.Listar();
             return View(oLista);
         }
@@ -90,7 +109,7 @@ namespace ProyectoADESS.Controllers
             }
         }
 
-        
+
 
     }
 }

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ClassAdd> 
+﻿@model IEnumerable<ClassAdd>
 
 
 @{
@@ -12,70 +12,71 @@
 <div class="text-center">
     <h1 class="display-4">@ViewData["Title"]</h1>
     <div class="Espacio-Container"></div>
-        <div class="BotonCargar-Container">
+    <div class="BotonCargar-Container">
+    </div>
+    <form asp-controller="MantenedorIncluidos" method="post" class="row g-3" style="display: flex; justify-content: center; align-items: center; position: relative; bottom:11px;" enctype="multipart/form-data">
+
+        <div class="col-auto">
+            <label for="LabelBuscar2" class="visually-hidden">Buscar por: </label>
+            <label readonly class="form-control-plaintext" id="LabelBuscar1" value="Buscar por: ">Buscar por:</label>
         </div>
-        <form asp-controller="MantenedorIncluidos" method="post" class="row g-3" style="display: flex; justify-content: center; align-items: center; position: relative; bottom:11px;" asp-action="" asp-controller="" enctype="multipart/form-data">
-            <div class="col-auto">
-                <label for="LabelBuscar2" class="visually-hidden">Buscar por: </label>
-                <label readonly class="form-control-plaintext" id="LabelBuscar1" value="Buscar por: ">Buscar por:</label>
-            </div>
-            <div class="col-auto">
-                <label class="visually-hidden">Cedula</label>
-                <input type="number" class="form-control" id="cedula_id" name="cedula" placeholder="Cedula">
-            </div>
-            <div class="col-auto">
-                <label class="visually-hidden">Nombre</label>
-                <input name="nombre" type="text" class="form-control" id="nombre_id" placeholder="Nombre">
-            </div>
-            <div class="col-auto">
-                <label class="visually-hidden">Apellido</label>
-                <input name="apellido" type="text" class="form-control" id="apellido_id" placeholder="Apellido">
-            </div>
-            <div class="col-auto" style="position: relative; top: 8px;">
-                <button type="submit" class="btn btn-pri mary mb-3" asp-action="Obtener"> Buscar</button>
-            </div>
-            <div class="col-auto" style="position: relative; top: 8px;">
-                <button type="submit" class="btn btn-warning mb-3" asp-action="Guardar">Insertar nuevo registro</button>
-            </div>
-        </form>
+        <div class="col-auto">
+            <label class="visually-hidden">Cedula</label>
+            <input type="text" class="form-control" id="cedula_id" name="cedula" placeholder="Cedula">
+        </div>
+        <div class="col-auto">
+            <label class="visually-hidden">Nombre</label>
+            <input name="nombre" type="text" class="form-control" id="nombre_id" placeholder="Nombre">
+        </div>
+        <div class="col-auto">
+            <label class="visually-hidden">Apellido</label>
+            <input name="apellido" type="text" class="form-control" id="apellido_id" placeholder="Apellido">
+        </div>
+        <div class="col-auto" style="position: relative; top: 8px;">
+            <button type="submit" class="btn btn-primary mb-3" asp-action="Buscar">Buscar</button>
+        </div>
+        <div class="col-auto" style="position: relative; top: 8px;">
+            <button type="submit" class="btn btn-warning mb-3" asp-action="Guardar">Insertar nuevo registro</button>
+        </div>
+    </form>
     <div class="col-auto">
         <a class="btn btn-success" href="/SubirArchivo/listar" style="margin:15px">Subir Archivo .txt</a>
     </div>
-        <div class="card">
-            <div class="card-body">
-                <table class="table">
-                    <thead>
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Cedula</th>
+                        <th>Apellidos </th>
+                        <th>Nombre</th>
+                        <th>Sub</th>
+                        <th>Monto</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
                         <tr>
-                            <th>Cedula</th>
-                            <th>Apellidos </th>
-                            <th>Nombre</th>
-                            <th>Sub</th>
-                            <th>Monto</th>
-                            <th>Fecha</th>
+                            <td>@item.Cedula_add</td>
+                            <td>@item.Apellido</td>
+                            <td>@item.Nombre</td>
+                            <td>@item.Sub</td>
+                            <td>@item.Monto</td>
+                            <td>@item.Fecha_add</td>
+                            <td>
+                                <a asp-action="Editar" asp-controller="MantenedorIncluidos" class="btn btn-success btn-sm" asp-route-id_add="@item.Id_add">Editar</a>
+                                <a asp-action="Eliminar" asp-controller="MantenedorIncluidos" class="btn btn-danger btn-sm" asp-route-id_add="@item.Id_add">Eliminar</a>
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in Model)
-                        {
-                            <tr>
-                                <td>@item.Cedula_add</td>
-                                <td>@item.Apellido</td>
-                                <td>@item.Nombre</td>
-                                <td>@item.Sub</td>
-                                <td>@item.Monto</td>
-                                <td>@item.Fecha_add</td>
-                                <td>
-                                    <a asp-action="Editar" asp-controller="MantenedorIncluidos" class="btn btn-success btn-sm" asp-route-id_add="@item.Id_add">Editar</a>
-                                    <a asp-action="Eliminar" asp-controller="MantenedorIncluidos" class="btn btn-danger btn-sm" asp-route-id_add="@item.Id_add">Eliminar</a>
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-                <a href="/Home/index" style="text-decoration:none; display:flex; justify-content:center; position: relative; bottom:5px;"><button class="btn btn-warning">Volver al menu principal</button></a>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <a href="/Home/index" style="text-decoration:none; display:flex; justify-content:center; position: relative; bottom:5px;"><button class="btn btn-warning">Volver al menu principal</button></a>
         <div class="col-auto" style="position: relative; top: 8px; left:555px; ">
             <button type="submit" class="btn btn-success mb-3">Generar arhivo .txt</button>
         </div>
-        </div>
+    </div>
 </div>
