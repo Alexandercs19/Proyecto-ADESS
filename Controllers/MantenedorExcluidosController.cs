@@ -14,15 +14,15 @@ namespace ProyectoADESS.Controllers
 
             if (!String.IsNullOrEmpty(cedula))
             {
-                usuarios = usuarios.Where(s => s.Cedula!.Contains(cedula));
+                usuarios = usuarios.Where(s => s.Cedula!.ToLower().Contains(cedula.ToLower()));
             }
             if (!String.IsNullOrEmpty(motivo))
             {
-                usuarios = usuarios.Where(s => s.Motivo!.Contains(motivo));
+                usuarios = usuarios.Where(s => s.Motivo!.ToLower().Contains(motivo.ToLower()));
             }
             if (!String.IsNullOrEmpty(fecha))
             {
-                usuarios = usuarios.Where(s => s.Fecha!.Contains(fecha));
+                usuarios = usuarios.Where(s => s.Fecha!.ToLower().Contains(fecha.ToLower()));
             }
 
             return View(usuarios.ToList());
@@ -36,6 +36,7 @@ namespace ProyectoADESS.Controllers
             return View(oListaExcluidos);
         }
 
+        [HttpGet]
         public IActionResult Guardar()
         {
             //Para devolver metodo en la vista

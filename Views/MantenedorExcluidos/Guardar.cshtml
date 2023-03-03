@@ -13,14 +13,17 @@
     <div class="form-group">
         <label class="exampleInputEmail1">Introduzca la Cedula</label>
         <input asp-for="Cedula" name ="cedula" type="text" class="form-control">
+        <span asp-validation-for="Cedula" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label class="exampleInputEmail1">Introduzca el Motivo</label>
         <input asp-for="Motivo" type="text" class="form-control">
+        <span asp-validation-for="Motivo" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label class="exampleInputEmail1">Introduzca el Fecha</label>
         <input asp-for="Fecha" type="text" class="form-control">
+        <span asp-validation-for="Fecha" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary" style="position: relative; top:5px;">Guardar</button>
     <button class="btn btn-warning" asp-action="Listar" style="position: relative; top:5px;">Volver a la lista</button>

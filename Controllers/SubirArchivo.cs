@@ -139,8 +139,8 @@ namespace ProyectoADESS.Controllers
             };
             string monto, fecha, sub;
             sub = list[3].Substring(0, 4); 
-            monto = list[3].Substring(5, 9);
-            fecha = list[3].Substring(9);
+            monto = list[3].Substring(4, 10);
+            fecha = list[3].Substring(11);
 
             registro.Cedula_add = list[0];
             registro.Apellido = list[1];

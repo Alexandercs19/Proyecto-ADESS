@@ -18,15 +18,15 @@ namespace ProyectoADESS.Controllers
 
             if (!String.IsNullOrEmpty(cedula))
             {
-                usuarios = usuarios.Where(s => s.Cedula_add!.Contains(cedula));
+                usuarios = usuarios.Where(s => s.Cedula_add!.Contains(cedula.ToLower()));
             }
             if (!String.IsNullOrEmpty(nombre))
             {
-                usuarios = usuarios.Where(s => s.Nombre!.Contains(nombre));
+                usuarios = usuarios.Where(s => s.Nombre!.ToLower().Contains(nombre.ToLower()));
             }
             if (!String.IsNullOrEmpty(apellido))
             {
-                usuarios = usuarios.Where(s => s.Apellido!.Contains(apellido));
+                usuarios = usuarios.Where(s => s.Apellido!.ToLower().Contains(apellido.ToLower()));
             }
 
             return View(usuarios.ToList());
@@ -37,6 +37,8 @@ namespace ProyectoADESS.Controllers
             var oLista = _Contacto.Listar();
             return View(oLista);
         }
+
+        [HttpGet]
         public IActionResult Guardar()
         {
             //Para devolver metodo en la vista
