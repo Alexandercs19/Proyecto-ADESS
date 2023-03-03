@@ -5,13 +5,14 @@ using Microsoft.AspNetCore.SignalR;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Threading;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Policy;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.CodeAnalysis.Elfie.Diagnostics;
 
 namespace ProyectoADESS.SQL
 {
     public class Contacto
     {
-
-
         public List<ClassAdd> Listar()
         {
 
@@ -44,6 +45,25 @@ namespace ProyectoADESS.SQL
             }
             return olista;
         }
+
+        public ClassAdd Paginar()
+        {
+            var oContacto = new ClassAdd();
+
+            var cn = new Conexion();
+
+            using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("sp_PaginarIncluidos", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.ExecuteScalar();
+            }
+
+            return oContacto;
+            
+        }
+
         public ClassAdd Obtener(int idApp)
         {
 

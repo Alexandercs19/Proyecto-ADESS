@@ -11,7 +11,6 @@ namespace ProyectoADESS.Controllers
     {
 
         Contacto _Contacto = new Contacto();
-
         public IActionResult Buscar(string cedula, string nombre, string apellido)
         {
             var usuarios = from Contacto in _Contacto.Listar() select Contacto;
@@ -32,10 +31,19 @@ namespace ProyectoADESS.Controllers
             return View(usuarios.ToList());
 
         }
-        public IActionResult Listar()
+        public IActionResult Listar(PaginacionViewModel paginacionViewModel )
         {
+            var cmd = _Contacto.Paginar();
             var oLista = _Contacto.Listar();
-            return View(oLista);
+            var respuestaVM = new PaginacionRespuesta<ClassAdd>
+            {
+                Elementos = oLista,
+                Pagina = paginacionViewModel.Pagina,
+                RecordsPorPagina = paginacionViewModel.RecordsPorPagina,
+                CantidadTotalRecords = cmd,
+                BaseUrl = Url.Action()
+            };
+            return View(respuestaVM);
         }
 
         [HttpGet]
