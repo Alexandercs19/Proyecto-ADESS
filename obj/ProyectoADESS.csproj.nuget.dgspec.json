@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Tepig\\Desktop\\Proyecto-ADESS\\ProyectoADESS.csproj": {}
   },
   "projects": {
@@ -12,12 +13,25 @@
         "projectPath": "C:\\Users\\Tepig\\Desktop\\Proyecto-ADESS\\ProyectoADESS.csproj",
         "packagesPath": "C:\\Users\\Tepig\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Tepig\\Desktop\\Proyecto-ADESS\\obj\\",
+=======
+    "C:\\Users\\PC-RICARDO\\repos\\Proyecto-ADESS\\ProyectoADESS.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\PC-RICARDO\\repos\\Proyecto-ADESS\\ProyectoADESS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\PC-RICARDO\\repos\\Proyecto-ADESS\\ProyectoADESS.csproj",
+        "projectName": "ProyectoADESS",
+        "projectPath": "C:\\Users\\PC-RICARDO\\repos\\Proyecto-ADESS\\ProyectoADESS.csproj",
+        "packagesPath": "C:\\Users\\PC-RICARDO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC-RICARDO\\repos\\Proyecto-ADESS\\obj\\",
+>>>>>>> 0231227368f798c1a53b208216b71637f77bcea5
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tepig\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC-RICARDO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +40,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -113,7 +126,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
