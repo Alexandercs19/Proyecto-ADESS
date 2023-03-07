@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Policy;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.CodeAnalysis.Elfie.Diagnostics;
+using NuGet.Protocol;
 
 namespace ProyectoADESS.SQL
 {
@@ -46,6 +47,30 @@ namespace ProyectoADESS.SQL
             return olista;
         }
 
+        public bool OptenerCedula(bool cedula)
+        {
+            var oCedula = new ClassAdd();
+
+            var cn = new Conexion();
+
+            using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("SP_validarCedula", conexion);
+                cmd.Parameters.AddWithValue("cedula_add", cedula);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (var dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        oCedula.Cedula_add = dr["cedula_add"].ToString();
+                    }
+                }
+            }
+            return cedula;
+
+        }
 
         public ClassAdd Paginar()
         {

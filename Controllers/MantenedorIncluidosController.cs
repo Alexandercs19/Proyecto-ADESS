@@ -29,7 +29,7 @@ namespace ProyectoADESS.Controllers
             {
                 foreach (var items in usuarios)
                 {
-                    writer.WriteLine("{0},{1},{2},{3},{4},{5}", items.Cedula_add, items.Apellido, items.Nombre, items.Sub, items.Monto, items.Fecha_add.ToUpper());
+                    writer.WriteLine("{0}{1}                              {2}                              {3}{4}{5}",items.Cedula_add, items.Apellido, items.Nombre, items.Sub, items.Monto, items.Fecha_add.ToUpper());
                 }
             }         
             // Nombre del archivo
@@ -147,6 +147,16 @@ namespace ProyectoADESS.Controllers
             {
                 return View();
             }
+        }
+        [HttpGet]
+        public IActionResult VerficarCedula(bool cedula)
+        {
+            var ced_exist = _Contacto.OptenerCedula(cedula);
+            if(ced_exist)
+            {
+                return Json("Esa cédula ya existe");
+            }
+            return Json(true);
         }
     }
 }

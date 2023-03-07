@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "la947TcMI7QlPShj4vsPh3aXDz7VAFP1PiFNfBxPLjdup/MRyxoKJpJImOKuRN/LvRSZsJ8T3+EYWex5WXWppg==",
+  "dgSpecHash": "HK77yZxYcNM02CjzJP64ls30AUITlHMrmr9S3h7azrpEj93aBFejRfEPDMDBTUEyhSU2zhKlMRoaBIgLFsjvjA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tepig\\Downloads\\proyecto_adess_ahorasi\\ProyectoADESS.csproj",
+  "projectFilePath": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\ProyectoADESS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tepig\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Tepig\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
