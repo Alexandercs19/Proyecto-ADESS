@@ -1,0 +1,13 @@
+Cedula, Apellido, Nombre, Sub, Monto, Fecha
+123456789,Migue,Vaso,1234,2500,202102
+40211908377,Pajaro,Luis,2343,2500,202102
+cuatro,Hernandez,Hector,N/a,klsf,2/16/2
+40211908,asdafda,sadad,dsad,1215,24126
+40211908377,Hector,Juanito,1535,50k,202302
+40211908377,Hector,Pepe,5302,15k,202102
+00103625877,Pajaro,Migue,5612,87k,93
+40234329477,Cruz Torres,Alejandro Pepe,5621,82k,202301
+40252647942,Miriano Almonte,Katherine Marianna,8712,32k,200803
+00102696142,Nuñez Perez,Junior Miguel,4521,85k,200205
+40211908377,El mejor,Deivi Alexander,2343,000050000,202305
+4021190837,Martinez,Luis,1234,2500,202302

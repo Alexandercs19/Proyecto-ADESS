@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProyectoADESS.SQL;
 using ProyectoADESS.Models;
-using System.IO;
+using System;
 using Microsoft.EntityFrameworkCore;
-
+using System.Text;
+using Microsoft.CodeAnalysis.Elfie.Serialization;
 
 namespace ProyectoADESS.Controllers
 {
@@ -11,9 +12,35 @@ namespace ProyectoADESS.Controllers
     {
 
         Contacto _Contacto = new Contacto();
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        public MantenedorIncluidosController(IWebHostEnvironment webHostEnvironment)
+        {
+            _webHostEnvironment = webHostEnvironment;
+        }
 
+        public IActionResult GenerarArchivo()
+        {
+            string archivoRuta = $"{_webHostEnvironment.WebRootPath}/{Guid.NewGuid()}.txt";
+            // Obtiene los productos desde la base de datos
+            var usuarios = from Contacto in _Contacto.Listar() select Contacto;
+            var writer = new StreamWriter(archivoRuta);
+            //Creamos el contenido del archivo 
+           using (writer)
+            {
+                foreach (var items in usuarios)
+                {
+                    writer.WriteLine("{0},{1},{2},{3},{4},{5}", items.Cedula_add, items.Apellido, items.Nombre, items.Sub, items.Monto, items.Fecha_add.ToUpper());
+                }
+            }         
+            // Nombre del archivo
+            string nombreArchivo = "archivo.txt";
 
-
+            // Tipo MIME
+            string tipoMime = "text/plain";
+            
+            // Genera el archivo y lo devuelve como un FileResult
+            return File(new byte[0], tipoMime, nombreArchivo);
+        }
 
         public IActionResult Buscar(string cedula, string nombre, string apellido)
         {
@@ -35,7 +62,7 @@ namespace ProyectoADESS.Controllers
             return View(usuarios.ToList());
 
         }
-        public IActionResult Listar(PaginacionViewModel paginacionViewModel )
+        public IActionResult Listar(PaginacionViewModel paginacionViewModel)
         {
             var cmd = _Contacto.Paginar();
             var oLista = _Contacto.Listar();
@@ -105,7 +132,6 @@ namespace ProyectoADESS.Controllers
             var ocontacto = _Contacto.Obtener(Id_add);
             return View(ocontacto);
 
-
         }
         [HttpPost]
         public IActionResult Eliminar(ClassAdd oid_add)
@@ -122,8 +148,5 @@ namespace ProyectoADESS.Controllers
                 return View();
             }
         }
-
-
-
     }
 }
