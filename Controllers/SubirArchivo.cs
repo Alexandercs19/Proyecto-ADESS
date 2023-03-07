@@ -3,12 +3,15 @@ using ProyectoADESS.Models;
 using System.Diagnostics;
 using System.Reflection;
 using System.IO;
+using Microsoft.Win32;
+using ProyectoADESS.SQL;
 
 namespace ProyectoADESS.Controllers
 {
     public class SubirArchivo : Controller
     {
-        [HttpGet]
+
+       [HttpGet]
         public IActionResult listar()
         {
             return View();
@@ -24,7 +27,7 @@ namespace ProyectoADESS.Controllers
                     string line;
                     while ((line = reader.ReadLine()) != null)
                     {
-                        Registros.Add(GetRegistros(line));
+                        Registros.Add(GetRegistro(line));
                     }
                 }
             }
@@ -42,7 +45,7 @@ namespace ProyectoADESS.Controllers
                     string line;
                     while ((line = reader.ReadLine()) != null)
                     {
-                        Registros.Add(GetRegistros(line));
+                        Registros.Add(GetRegistro(line));
 
                     }
                 }
@@ -51,106 +54,42 @@ namespace ProyectoADESS.Controllers
             return Ok(Registros);
         }
         [HttpPost]
-        public IActionResult GuardarRegistr([FromBody] List<ClassAdd> registros)
+        public IActionResult GuardarRegistros([FromBody] List<ClassAdd> registros)
         {
+            Contacto contacto = new Contacto();
+            if(registros != null && registros.Count > 0)
+            {
+            registros.ForEach(x => contacto.Guardar(x)); 
             return Ok(registros);
+            }
+            else
+            {
+                return BadRequest("Maldito ADESS DEL DIABLO ARREGLEN SU MALDITA VAINA VALSA DE AQUEROSO COÑO PORQUE UNO ES UN RELAJO EXISTE EXCEL MMGS");
+            }
+
+
         }
+
+
         public IActionResult privacy()
         {
             return View();
         }
 
-        private ClassAdd GetRegistros(string line)
+        private ClassAdd GetRegistro(string line)
         {
-            var lineaList = line.Split(" ").ToList();
-            List<string> list = new List<string>();
-            var registro = new ClassAdd();
-
-            foreach (var linea in lineaList)
+            var registro = new ClassAdd
             {
-                if (linea != "")
-                {
-                    if (list.Count() == 0)
-                    {
-                        
-                        string cedula = linea.Substring(0, 11);
-                        string apellido = linea.Substring(11);
-                        string nombre = linea.Substring(11);
-
-                        
-                        int currentApellido = 0;
-                        int currentNombre = 0;
-                        string PrimerApellido = "";
-                        string SegundoApellido = "";
-                        string PrimerNombre = "";
-                        string SegundoNombre = "";
-                        
-
-                        for (int i = 0; i < apellido.Length; i++)
-                        {
-                            if (apellido[i].ToString() == apellido[i].ToString().ToUpper() && i == 0)
-                            {
-                                currentApellido = 1; 
-
-                            }
-                            if (apellido[i].ToString() == apellido[i].ToString().ToUpper() && i > 1)
-                            {
-                                currentApellido = 2;
-                            }
-                            if (currentApellido == 1)
-                            {
-                                PrimerApellido += apellido[i];
-                            }
-                            else
-                            {
-                                SegundoApellido += apellido[i];
-                            }
-                            
-                        }   
-                        for(int i = 0;i < nombre.Length; i++)
-                        {
-                            if (nombre[i].ToString() == nombre[i].ToString().ToUpper() && i == 0)
-                            {
-                                currentNombre = 1;
-                            }
-                            if (nombre[i].ToString() == nombre[i].ToString().ToUpper() && i > 1)
-                            {
-                                currentNombre= 2;
-                            }
-                            if(currentNombre == 1)
-                            {
-                                PrimerNombre+= nombre[i];
-                            }
-                            else
-                            {
-                                SegundoNombre+= nombre[i];  
-                            }
-                        }
-                        list.Add(cedula);
-                        list.Add(PrimerApellido + SegundoApellido);
-                        list.Add(PrimerNombre + " " + SegundoNombre);
-                    }
-                    else
-                    {
-                        list.Add(linea);
-                    }
-
-                }
+                Cedula_add = line.Substring(0, 11),
+                Apellido = line.Substring(11, 30),
+                Nombre = line.Substring(41, 30),
+                Sub = line.Substring(71, 4),
+                Monto = line.Substring(75, 9),
+                Fecha_add = line.Substring(84)
             };
-            string monto, fecha, sub;
-            sub = list[3].Substring(0, 4); 
-            monto = list[3].Substring(4, 10);
-            fecha = list[3].Substring(11);
-
-            registro.Cedula_add = list[0];
-            registro.Apellido = list[1];
-            registro.Nombre = list[2];
-            registro.Sub= sub;
-            registro.Monto = monto.Substring(3);
-            registro.Fecha_add = fecha.Substring(3);
 
             return registro;
         }
+        }
     }
-}
 

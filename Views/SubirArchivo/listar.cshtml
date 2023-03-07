@@ -29,7 +29,7 @@
 </div>
 
 <br />
-@if(Model != null && Model.Count > 0)
+@if (Model != null && Model.Count > 0)
 {
 
 
@@ -37,44 +37,123 @@
         <table class="table">
             <thead>
                 <tr>
-                        <th scope="col">Cedula</th>
-                        <th scope="col">Apellido</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Sub</th>
-                        <th scope="col">Monto</th>
-                        <th scope="col">Fecha</th>
-                    </tr>
+                    <th scope="col">Cedula</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Sub</th>
+                    <th scope="col">Monto</th>
+                    <th scope="col">Fecha</th>
+                </tr>
             </thead>
 
             <tbody id="tblbody">
-                @foreach(var registro in Model)
+                @foreach (var registro in Model)
                 {
-                   <tr>
-                            <td>
-                                @registro.Cedula_add
-                            </td>
-                            <td>
-                                @registro.Apellido
-                            </td>
-                            <td>
-                                @registro.Nombre
-                            </td>
-                            <td>
-                                @registro.Sub
-                            </td>
-                            <td>
-                                @registro.Monto
-                            </td>
-                            <td>
-                                @registro.Fecha_add
-                            </td>
+                    <tr>
+                        <td>
+                            @registro.Cedula_add
+                        </td>
+                        <td>
+                            @registro.Apellido
+                        </td>
+                        <td>
+                            @registro.Nombre
+                        </td>
+                        <td>
+                            @registro.Sub
+                        </td>
+                        <td>
+                            @registro.Monto
+                        </td>
+                        <td>
+                            @registro.Fecha_add
+                        </td>
 
-                            
-                        </tr> 
+
+                    </tr>
                 }
+
             </tbody>
         </table>
+
     </div>
 
-
+    <div class="card-footer d-flex justify-content-end">
+        <button class=" btn btn-warning" onclick="sendTable()"> Guardar Registros </button>
+    </div>
 }
+
+else
+{
+    <h1>
+        Seleccione un archivo con registros para mostrar
+    </h1>
+}
+
+<script>
+    var personaArray = []
+
+
+
+
+
+    async function sendTable() {
+
+        var URI = `@Url.ActionLink("Index","Home")`
+
+
+
+        console.log('URL: ', URI)
+
+        let tableInfo = document.getElementsByTagName('td');
+
+        for (let i = 0; i < tableInfo.length; i += 6) {
+            personaArray.push({
+                cedula_add: tableInfo[i].innerText,
+                nombre: tableInfo[i + 1].innerText,
+                apellido: tableInfo[i + 2].innerText,
+                sub: tableInfo[i + 3].innerText,
+                monto: tableInfo[i + 4].innerText,
+                fecha_add: tableInfo[i + 5].innerText,
+
+            })
+        }
+
+        const objToSend = JSON.stringify(personaArray)
+
+        const resp = await fetch(`${URI}SubirArchivo/GuardarRegistros`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: objToSend,
+
+        });
+
+        if(resp.status == 200){
+            location.href = `${URI}MantenedorIncluidos/Listar`
+        }
+        console.log(resp);
+
+        //
+
+        //console.log('URI de ASP:  ')
+
+        console.log(objToSend)
+
+        //$.ajax({
+        //    type: "POST",
+        //    url: `${URI}api/GuardarTxT`,
+        //    data: objToSend,
+        //    data
+        //});
+
+
+
+    }
+
+</script>
+
+
+
+

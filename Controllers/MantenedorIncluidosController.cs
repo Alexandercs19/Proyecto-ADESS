@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProyectoADESS.SQL;
 using ProyectoADESS.Models;
-using System;
+using System.IO;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -11,6 +11,10 @@ namespace ProyectoADESS.Controllers
     {
 
         Contacto _Contacto = new Contacto();
+
+
+
+
         public IActionResult Buscar(string cedula, string nombre, string apellido)
         {
             var usuarios = from Contacto in _Contacto.Listar() select Contacto;
