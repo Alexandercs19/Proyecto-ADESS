@@ -46,6 +46,7 @@ namespace ProyectoADESS.SQL
             return olista;
         }
 
+
         public ClassAdd Paginar()
         {
             var oContacto = new ClassAdd();
