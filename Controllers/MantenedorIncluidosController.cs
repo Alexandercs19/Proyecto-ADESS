@@ -40,7 +40,7 @@ namespace ProyectoADESS.Controllers
                 Elementos = oLista,
                 Pagina = paginacionViewModel.Pagina,
                 RecordsPorPagina = paginacionViewModel.RecordsPorPagina,
-                CantidadTotalRecords = cmd,
+                //CantidadTotalRecords = cmd;
                 BaseUrl = Url.Action()
             };
             return View(respuestaVM);

@@ -18,15 +18,14 @@
         <div class="col-auto">
             <label class="visually-hidden">Cedula</label>
             <input type="text" class="form-control" id="cedula_id" name="cedula" placeholder="Cedula">
-             
         </div>
         <div class="col-auto">
             <label class="visually-hidden">Nombre</label>
-            <input name="nombre" type="text" class="form-control" id="nombre_id" placeholder="Nombre">
+            <input name="nombre" type="text" class="form-control" id="nombre_id" placeholder="Nombre" required>
         </div>
         <div class="col-auto">
             <label class="visually-hidden">Apellido</label>
-            <input name="apellido" type="text" class="form-control" id="apellido_id" placeholder="Apellido">
+            <input name="apellido" type="text" class="form-control" id="apellido_id" placeholder="Apellido" required>
         </div>
         <div class="col-auto" style="position: relative; top: 8px;">
             <button type="submit" class="btn btn-primary mb-3" asp-action="Buscar">Buscar</button>
