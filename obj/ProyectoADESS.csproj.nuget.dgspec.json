@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tepig\\Desktop\\Proyecto-ADESS\\ProyectoADESS.csproj": {}
+    "C:\\Users\\Tepig\\Downloads\\proyecto_adess_ahorasi\\ProyectoADESS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tepig\\Desktop\\Proyecto-ADESS\\ProyectoADESS.csproj": {
+    "C:\\Users\\Tepig\\Downloads\\proyecto_adess_ahorasi\\ProyectoADESS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tepig\\Desktop\\Proyecto-ADESS\\ProyectoADESS.csproj",
+        "projectUniqueName": "C:\\Users\\Tepig\\Downloads\\proyecto_adess_ahorasi\\ProyectoADESS.csproj",
         "projectName": "ProyectoADESS",
-        "projectPath": "C:\\Users\\Tepig\\Desktop\\Proyecto-ADESS\\ProyectoADESS.csproj",
+        "projectPath": "C:\\Users\\Tepig\\Downloads\\proyecto_adess_ahorasi\\ProyectoADESS.csproj",
         "packagesPath": "C:\\Users\\Tepig\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tepig\\Desktop\\Proyecto-ADESS\\obj\\",
+        "outputPath": "C:\\Users\\Tepig\\Downloads\\proyecto_adess_ahorasi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

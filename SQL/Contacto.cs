@@ -46,6 +46,7 @@ namespace ProyectoADESS.SQL
             return olista;
         }
 
+
         public ClassAdd Paginar()
         {
             var oContacto = new ClassAdd();
@@ -63,6 +64,11 @@ namespace ProyectoADESS.SQL
             return oContacto;
             
         }
+
+        //public ClassAdd OptenerPorId()
+        //{
+
+        //}
 
         public ClassAdd Obtener(int idApp)
         {
