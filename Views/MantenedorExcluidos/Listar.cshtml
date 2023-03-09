@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Excluidos";
 }
+@section Estiloss{
+    <link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+}
 <div class="text-center">
     <h1 class="display-4">@ViewData["Title"]</h1>
     <div class="Espacio-Container">
@@ -34,7 +37,7 @@
         </form>
         <div class="card">
             <div class="card-body">
-                <table class="table">
+                <table id="examples" class="table" style="width:100%" ">
                     <thead>
                         <tr>
                             <th>Cedula</th>
@@ -42,7 +45,7 @@
                             <th>Fecha</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    @*<tbody>
                         @foreach (var item in Model)
                         {
                             <tr>
@@ -55,10 +58,18 @@
                                 </td>
                             </tr>
                         }
-                    </tbody>
+                    </tbody>*@
                 </table>
             </div>
             <a href="/Home/index" style="text-decoration:none; position: relative; bottom:5px;"><button class="btn btn-warning">Volver al menu principal</button></a>
         </div>
+        <div class="col-auto" style="position: relative; top: 8px; left:555px; ">
+            <a class="btn btn-success mb-3" asp-controller="MantenedorExcluidos" asp-action="GenerarArchivo" methop="post">Generar arhivo .txt</a>
+        </div>
     </div>
 </div>
+
+@section scriptss{
+    <link src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js" />
+    <script src="~/lib/dt/dtlistarexcluidos.js"></script>
+ }

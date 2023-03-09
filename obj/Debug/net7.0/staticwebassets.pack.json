@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\4f9d733e-596d-4313-808f-ed12e61c59f7.txt"
     },
     {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\5cf5710d-7ed1-4c03-9052-fb6ddefc099d.txt",
+      "PackagePath": "staticwebassets\\5cf5710d-7ed1-4c03-9052-fb6ddefc099d.txt"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\9c55e5a8-5bd9-45d4-ab68-50b72cd907ad.txt",
+      "PackagePath": "staticwebassets\\9c55e5a8-5bd9-45d4-ab68-50b72cd907ad.txt"
+    },
+    {
       "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -23,6 +31,194 @@
     {
       "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bootstrap4.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bootstrap5.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bootstrap5.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bootstrap5.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bootstrap5.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bulma.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bulma.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bulma.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bulma.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.dataTables.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.dataTables.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.foundation.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.foundation.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.jqueryui.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.semanticui.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.semanticui.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\jquery.dataTables.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\jquery.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\jquery.dataTables.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\css\\jquery.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\images\\sort_asc.png",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\images\\sort_asc.png"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\images\\sort_asc_disabled.png",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\images\\sort_asc_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\images\\sort_both.png",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\images\\sort_both.png"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\images\\sort_desc.png",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\images\\sort_desc.png"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\images\\sort_desc_disabled.png",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\images\\sort_desc_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bootstrap4.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bootstrap4.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bootstrap4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bootstrap5.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bootstrap5.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bootstrap5.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bootstrap5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bulma.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bulma.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bulma.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.bulma.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.dataTables.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.dataTables.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.foundation.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.foundation.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.foundation.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.foundation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.jqueryui.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.jqueryui.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.jqueryui.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.jqueryui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.semanticui.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.semanticui.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.semanticui.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\dataTables.semanticui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\jquery.dataTables.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\jquery.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\DataTables-1.13.3\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\datatables.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\datatables.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\datatables.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\datatables.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\datatables.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\datatables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\datatables.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\datatables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\jQuery-3.6.0\\jquery-3.6.0.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\jQuery-3.6.0\\jquery-3.6.0.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\jQuery-3.6.0\\jquery-3.6.0.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\jQuery-3.6.0\\jquery-3.6.0.min.js"
     },
     {
       "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -203,6 +399,14 @@
     {
       "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\dt\\dtListar.js",
+      "PackagePath": "staticwebassets\\lib\\dt\\dtListar.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\dt\\dtListarExcluidos.js",
+      "PackagePath": "staticwebassets\\lib\\dt\\dtListarExcluidos.js"
     },
     {
       "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",

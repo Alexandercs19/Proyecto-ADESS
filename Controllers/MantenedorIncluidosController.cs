@@ -5,6 +5,8 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using System.Text;
 using Microsoft.CodeAnalysis.Elfie.Serialization;
+using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace ProyectoADESS.Controllers
 {
@@ -42,6 +44,8 @@ namespace ProyectoADESS.Controllers
             return File(new byte[0], tipoMime, nombreArchivo);
         }
 
+
+
         public IActionResult Buscar(string cedula, string nombre, string apellido)
         {
             var usuarios = from Contacto in _Contacto.Listar() select Contacto;
@@ -64,7 +68,6 @@ namespace ProyectoADESS.Controllers
         }
         public IActionResult Listar(PaginacionViewModel paginacionViewModel)
         {
-            var cmd = _Contacto.Paginar();
             var oLista = _Contacto.Listar();
             var respuestaVM = new PaginacionRespuesta<ClassAdd>
             {
@@ -76,7 +79,34 @@ namespace ProyectoADESS.Controllers
             };
             return View(respuestaVM);
         }
+        public JsonResult Paginar()
+        {
+            var cn = new Conexion();
+            List<ClassAdd> lista = new List<ClassAdd>();
 
+            using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+            {
+                conexion.Open();
+                var cmd = new SqlCommand("sp_PaginarIncluidos", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (var dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                        lista.Add(new ClassAdd
+                        {
+                            Cedula_add = dr["Cedula_add"].ToString(),
+                            Apellido = dr["Apellido"].ToString(),
+                            Nombre = dr["Nombre"].ToString(),
+                            Sub = dr["Sub"].ToString(),
+                            Monto = dr["Monto"].ToString(),
+                            Fecha_add = dr["Fecha_add"].ToString(),
+                            Id_add = Convert.ToInt32(dr["Id_add"])
+                        });
+                }
+            }
+            return Json(new { data = lista });
+        }
         [HttpGet]
         public IActionResult Guardar()
         {

@@ -44,7 +44,7 @@ namespace ProyectoADESS.SQL
                     }
                 }
             }
-            return olista;
+            return (olista);
         }
 
         public bool OptenerCedula(bool cedula)
@@ -72,28 +72,39 @@ namespace ProyectoADESS.SQL
 
         }
 
-        public ClassAdd Paginar()
+        public JsonResult Paginar()
         {
-            var oContacto = new ClassAdd();
-
             var cn = new Conexion();
+            List<ClassAdd> lista = new List<ClassAdd>();
 
             using (var conexion = new SqlConnection(cn.getCadenaSQL()))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("sp_PaginarIncluidos", conexion);
+                var cmd = new SqlCommand("sp_PaginarIncluidos", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.ExecuteScalar();
-            }
 
-            return oContacto;
-            
+                using (var dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                        lista.Add(new ClassAdd
+                        {
+                            Cedula_add = dr["Cedula_add"].ToString(),
+                            Apellido = dr["Apellido"].ToString(),
+                            Nombre = dr["Nombre"].ToString(),
+                            Sub = dr["Sub"].ToString(),
+                            Monto = dr["Monto"].ToString(),
+                            Fecha_add = dr["Fecha_add"].ToString(),
+                            Id_add = Convert.ToInt32(dr["Id_add"])
+                        });
+                }
+            }
+            return Json(new { data = lista });
         }
 
-        //public ClassAdd OptenerPorId()
-        //{
-
-        //}
+        private JsonResult Json(object value)
+        {
+            throw new NotImplementedException();
+        }
 
         public ClassAdd Obtener(int idApp)
         {

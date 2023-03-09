@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProyectoADESS.styles.css" asp-append-version="true" />
-    <link href="/DataTables/datatables.css">
-    <link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.css">
+    <link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="~/lib/datatable/datatables-1.13.3/css/datatables.bootstrap.min.css" rel="stylesheet" />
+    @await RenderSectionAsync("Estilos", required: false)
+    @await RenderSectionAsync("Estiloss", required: false)
+
 </head>
 <body>
     <header>
@@ -47,8 +50,9 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/DataTables/datatables.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
-
-
-
+    @await RenderSectionAsync("Scriptss", required: false)
+    <script src="~/lib/datatable/datatables-1.13.3/js/jquery.datatables.js"></script>
+    <script src="~/lib/datatable/datatables-1.13.3/js/jquery.datatables.min.js"></script>
+    <script src="~/lib/datatable/datatables-1.13.3/js/datatables.bootstrap.min.js"></script>
 </body>
 </html>

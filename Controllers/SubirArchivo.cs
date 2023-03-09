@@ -64,7 +64,7 @@ namespace ProyectoADESS.Controllers
             }
             else
             {
-                return BadRequest("Maldito ADESS DEL DIABLO ARREGLEN SU MALDITA VAINA VALSA DE AQUEROSO COÑO PORQUE UNO ES UN RELAJO EXISTE EXCEL MMGS");
+                return BadRequest("Error ");
             }
 
 

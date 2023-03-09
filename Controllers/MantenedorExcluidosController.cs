@@ -1,12 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using ProyectoADESS.Models;
 using ProyectoADESS.SQL;
+using System.Data;
 
 namespace ProyectoADESS.Controllers
 {
     public class MantenedorExcluidosController : Controller
     {
         ContactoExcluidos _contactoExcluidos = new ContactoExcluidos();
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
         public IActionResult Buscar(string cedula, string motivo, string fecha)
         {
@@ -36,6 +40,35 @@ namespace ProyectoADESS.Controllers
             return View(oListaExcluidos);
         }
 
+        public JsonResult Paginar()
+        {
+            List<Excluidos> lista = new List<Excluidos>();
+            var cn = new Conexion();
+
+            using (var conexionExcluidos = new SqlConnection(cn.getCadenaSQL()))
+            {
+                conexionExcluidos.Open();
+                SqlCommand cmd = new SqlCommand("sp_ListarExcluidos", conexionExcluidos);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (var dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        lista.Add(new Excluidos()
+                        {
+                            
+                            Cedula = dr["Cedula"].ToString(),
+                            Motivo = dr["Motivo"].ToString(),
+                            Fecha = dr["Fecha"].ToString(),
+
+                        });
+                    }
+                }
+            }
+            return Json(new { data = lista });
+        }
+
         [HttpGet]
         public IActionResult Guardar()
         {
@@ -60,6 +93,35 @@ namespace ProyectoADESS.Controllers
                 return View();
             }
 
+        }
+
+        public MantenedorExcluidosController(IWebHostEnvironment webHostEnvironment)
+        {
+            _webHostEnvironment = webHostEnvironment;
+        }
+
+        public IActionResult GenerarArchivo()
+        {
+            string archivoRuta = $"{_webHostEnvironment.WebRootPath}/{Guid.NewGuid()}.txt";
+            // Obtiene los productos desde la base de datos
+            var usuarios = from ContactoExcluidos in _contactoExcluidos.Listar() select ContactoExcluidos;
+            var writer = new StreamWriter(archivoRuta);
+            //Creamos el contenido del archivo 
+            using (writer)
+            {
+                foreach (var items in usuarios)
+                {
+                    writer.WriteLine("{0}                               {1}                         {2}", items.Cedula, items.Motivo, items.Fecha.ToUpper());
+                }
+            }
+            // Nombre del archivo
+            string nombreArchivo = "archivo.txt";
+
+            // Tipo MIME
+            string tipoMime = "text/plain";
+
+            // Genera el archivo y lo devuelve como un FileResult
+            return File(new byte[0], tipoMime, nombreArchivo);
         }
 
         public IActionResult Editar(int IdExcluidos)
