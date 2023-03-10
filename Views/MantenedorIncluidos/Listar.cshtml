@@ -59,18 +59,18 @@
                     </tr>
                 </thead>
                 @*<tbody>
-                    @foreach (var item in Model.Elementos)
+                    @foreach (var item in model.elementos)
                     {
                         <tr>
-                            <td>@item.Cedula_add</td>
-                            <td>@item.Apellido</td>
-                            <td>@item.Nombre</td>
-                            <td>@item.Sub</td>
-                            <td>@item.Monto</td>
-                            <td>@item.Fecha_add</td>
+                            <td>@item.cedula_add</td>
+                            <td>@item.apellido</td>
+                            <td>@item.nombre</td>
+                            <td>@item.sub</td>
+                            <td>@item.monto</td>
+                            <td>@item.fecha_add</td>
                             <td>
-                                <a asp-action="Editar" asp-controller="MantenedorIncluidos" class="btn btn-success btn-sm" asp-route-id_add="@item.Id_add">Editar</a>
-                                <a asp-action="Eliminar" asp-controller="MantenedorIncluidos" class="btn btn-danger btn-sm" asp-route-id_add="@item.Id_add">Eliminar</a>
+                                <a asp-action="editar" asp-controller="mantenedorincluidos" class="btn btn-success btn-sm" asp-route-id_add="@item.id_add">editar</a>
+                                <a asp-action="eliminar" asp-controller="mantenedorincluidos" class="btn btn-danger btn-sm" asp-route-id_add="@item.id_add">eliminar</a>
                             </td>
                         </tr>
                     }
