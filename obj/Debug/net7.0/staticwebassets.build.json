@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0jYYUtS0viQ1lHd7WOf2sQx3u0KpDaDwk3mWqnDhYns=",
+  "Hash": "SE2oJhTXY+4gvVWhvq5s4GFor3RmFw9aq07Iks2DXOU=",
   "Source": "ProyectoADESS",
   "BasePath": "_content/ProyectoADESS",
   "Mode": "Default",
@@ -3194,6 +3194,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\Reporte-De-3-13-2023-12-00-00-AM.txt",
+      "SourceId": "ProyectoADESS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\",
+      "BasePath": "_content/ProyectoADESS",
+      "RelativePath": "Reporte-De-3-13-2023-12-00-00-AM.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Reporte-De-3-13-2023-12-00-00-AM.txt"
     }
   ]
 }

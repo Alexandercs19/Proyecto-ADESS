@@ -47,7 +47,7 @@ namespace ProyectoADESS.SQL
             return (olista);
         }
 
-        public bool OptenerCedula(bool cedula)
+        public ClassAdd ObtenerCedula(string cedula)
         {
             var oCedula = new ClassAdd();
 
@@ -56,7 +56,7 @@ namespace ProyectoADESS.SQL
             using (var conexion = new SqlConnection(cn.getCadenaSQL()))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("SP_validarCedula", conexion);
+                SqlCommand cmd = new SqlCommand("sp_ObtenerPorCedula", conexion);
                 cmd.Parameters.AddWithValue("cedula_add", cedula);
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -65,10 +65,16 @@ namespace ProyectoADESS.SQL
                     while (dr.Read())
                     {
                         oCedula.Cedula_add = dr["cedula_add"].ToString();
+                        oCedula.Nombre = dr["nombre"].ToString();
+                        oCedula.Cedula_add = dr["apellido"].ToString();
+                        oCedula.Sub = dr["sub"].ToString();
+                        oCedula.Fecha_add = dr["fecha_add"].ToString();
+                        oCedula.Monto = dr["monto"].ToString();
+                        oCedula.Id_add =(int)dr["id_add"];
                     }
                 }
             }
-            return cedula;
+            return oCedula;
 
         }
 
@@ -140,6 +146,9 @@ namespace ProyectoADESS.SQL
         public bool Guardar(ClassAdd ocontacto)
         {
             bool rpta;
+
+            var RegistroObtenido = ObtenerCedula(ocontacto.Cedula_add);
+            if(RegistroObtenido.Cedula_add != null) return false;
 
             try
             {

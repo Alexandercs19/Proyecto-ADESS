@@ -22,28 +22,34 @@ namespace ProyectoADESS.Controllers
 
         public IActionResult GenerarArchivo()
         {
-            string archivoRuta = $"{_webHostEnvironment.WebRootPath}/{Guid.NewGuid()}.txt";
+            string nombre = $"Reporte-De-{DateTime.Today.Date.ToString().Replace("/", "-").Replace(" ","-").Replace(":", "-")}";
+    
+            string archivoRuta = $"{_webHostEnvironment.WebRootPath}/{nombre}.txt";
             // Obtiene los productos desde la base de datos
             var usuarios = from Contacto in _Contacto.Listar() select Contacto;
-            var writer = new StreamWriter(archivoRuta);
+            
             //Creamos el contenido del archivo 
-           using (writer)
+            using (var writer = new StreamWriter(archivoRuta))
             {
                 foreach (var items in usuarios)
                 {
-                    writer.WriteLine("{0}{1}                              {2}                              {3}{4}{5}",items.Cedula_add, items.Apellido, items.Nombre, items.Sub, items.Monto, items.Fecha_add.ToUpper());
+                    writer.WriteLine("{0}{1}                              {2}                              {3}{4}{5}", items.Cedula_add, items.Apellido, items.Nombre, items.Sub, items.Monto, items.Fecha_add.ToUpper());
                 }
-            }         
+            }
             // Nombre del archivo
-            string nombreArchivo = "archivo.txt";
 
-            // Tipo MIME
-            string tipoMime = "text/plain";
-            
-            // Genera el archivo y lo devuelve como un FileResult
-            return File(new byte[0], tipoMime, nombreArchivo);
+            if (System.IO.File.Exists(archivoRuta))
+            {
+                FileStream fs = new FileStream(archivoRuta, FileMode.Open);
+                    return File(fs,"application/octet-stream", $"{nombre}.txt");
+            }
+            else
+            {
+                ViewBag.ErrorArchivo = "Ocurrio un error al generar el archivo";
+                return View("Listar", "MantenedorIncluidos");
+            }
+
         }
-
         public IActionResult Buscar(string cedula, string nombre, string apellido)
         {
             var usuarios = from Contacto in _Contacto.Listar() select Contacto;
@@ -78,7 +84,7 @@ namespace ProyectoADESS.Controllers
             return View(oLista);
         }
         public JsonResult Paginar()
-            {
+        {
             var lista = new List<ClassAdd>();
 
             var cn = new Conexion();
@@ -189,10 +195,10 @@ namespace ProyectoADESS.Controllers
             return RedirectToAction("Listar");
         }
 
-        public IActionResult VerficarCedula(bool cedula)
+        public IActionResult VerficarCedula(string cedula)
         {
-            var ced_exist = _Contacto.OptenerCedula(cedula);
-            if(ced_exist)
+            var ced_exist = _Contacto.ObtenerCedula(cedula);
+            if (ced_exist != null)
             {
                 return Json("Esa cédula ya existe");
             }

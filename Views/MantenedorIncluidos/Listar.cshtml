@@ -9,6 +9,13 @@
   
 }
 
+@if (ViewBag.ErrorArchivo != null)
+{
+    <div class="alert alert-danger" role="alert">
+       Ocurrio un Error al Generar el Archivo
+    </div>
+}
+
 <div class="text-center">
     <h1 class="display-4">@ViewData["Title"]</h1>
     <div class="Espacio-Container"></div>
