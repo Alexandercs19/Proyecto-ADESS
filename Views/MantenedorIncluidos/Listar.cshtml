@@ -1,4 +1,4 @@
-﻿@model PaginacionRespuesta<ClassAdd>
+﻿@model IEnumerable<ClassAdd>
 
 @{
     ViewData["Title"] = "Incluidos";
@@ -48,7 +48,7 @@
             <table id="example" class="display" style="width:100%">
                 <thead>
                     <tr>
-                        <th></th>
+                        <th>ID</th>
                         <th>Cedula</th>
                         <th>Apellidos </th>
                         <th>Nombre</th>
@@ -58,23 +58,24 @@
                         <th></th>
                     </tr>
                 </thead>
-               @* <tbody>
-                    @foreach (var item in model.elementos)
+                <tbody>
+                    @foreach (var item in Model)
                     {
                         <tr>
-                            <td>@item.cedula_add</td>
-                            <td>@item.apellido</td>
-                            <td>@item.nombre</td>
-                            <td>@item.sub</td>
-                            <td>@item.monto</td>
-                            <td>@item.fecha_add</td>
+                            <td>@item.Id_add</td>
+                            <td>@item.Cedula_add</td>
+                            <td>@item.Apellido</td>
+                            <td>@item.Nombre</td>
+                            <td>@item.Sub</td>
+                            <td>@item.Monto</td>
+                            <td>@item.Fecha_add</td>
                             <td>
-                                <a asp-action="editar" asp-controller="mantenedorincluidos" class="btn btn-success btn-sm" asp-route-id_add="@item.id_add">editar</a>
-                                <a asp-action="eliminar" asp-controller="mantenedorincluidos" class="btn btn-danger btn-sm" asp-route-id_add="@item.id_add">eliminar</a>
+                                <a asp-action="editar" asp-controller="mantenedorincluidos" class="btn btn-success btn-sm" asp-route-id_add="@item.Id_add">editar</a>
+                                <a asp-action="eliminar" asp-controller="mantenedorincluidos" class="btn btn-danger btn-sm" asp-route-id_add="@item.Id_add">eliminar</a>
                             </td>
                         </tr>
                     }
-                </tbody>*@
+                </tbody>
             </table>
         </div>
         <a href="/Home/index" style="text-decoration:none; display:flex; justify-content:center; position: relative; bottom:5px;"><button class="btn btn-warning">Volver al menu principal</button></a>
@@ -86,6 +87,11 @@
 </div>
 
 @section scripts{
-    <link src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js" />
-    <script src="~/lib/dt/dtlistar.js"></script>
- }
+        <link src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js" />
+        @*<script src="~/lib/dt/dtlistar.js"></script>*@
+        <script>
+            $(document).ready(function () {
+                $('#example').DataTable();
+            });
+        </script>
+     }

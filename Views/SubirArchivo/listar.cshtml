@@ -3,6 +3,9 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+@section Estilos{
+    <link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+}
 
 <div class="container">
     <div class="card">
@@ -35,7 +38,7 @@
 
 
     <div class="card-body">
-        <table class="table">
+        <table id="example" class="display" style="width:100%">
             <thead>
                 <tr>
                     <th scope="col">Cedula</th>
@@ -55,10 +58,10 @@
                             @registro.Cedula_add
                         </td>
                         <td>
-                            @registro.Apellido
+                            @registro.Nombre
                         </td>
                         <td>
-                            @registro.Nombre
+                            @registro.Apellido
                         </td>
                         <td>
                             @registro.Sub
@@ -89,14 +92,18 @@ else
 {
    
 }
+@section scripts{
+    <link src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js" />
+    @*<script src="~/lib/dt/dtlistar.js"></script>*@
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+}
 
 <script>
     var personaArray = []
-
-
-
-
-
     async function sendTable() {
 
         var URI = `@Url.ActionLink("Index","Home")`
@@ -151,9 +158,9 @@ else
 
 
     }
-
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
 </script>
-
-
 
 

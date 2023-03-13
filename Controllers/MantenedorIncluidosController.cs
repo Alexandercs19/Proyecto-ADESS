@@ -67,15 +67,15 @@ namespace ProyectoADESS.Controllers
         public IActionResult Listar(PaginacionRespuesta paginacionViewModel)
         {
             var oLista = _Contacto.Listar();
-            var respuestaVM = new PaginacionRespuesta<ClassAdd>
-            {
-                Elementos = oLista,
-                Pagina = paginacionViewModel.Pagina,
-                RecordsPorPagina = paginacionViewModel.RecordsPorPagina,
-                //CantidadTotalRecords = cmd;
-                BaseUrl = Url.Action()
-            };
-            return View(respuestaVM);
+            //var respuestaVM = new PaginacionRespuesta<ClassAdd>
+            //{
+            //    Elementos = oLista,
+            //    Pagina = paginacionViewModel.Pagina,
+            //    RecordsPorPagina = paginacionViewModel.RecordsPorPagina,
+            //    //CantidadTotalRecords = cmd;
+            //    BaseUrl = Url.Action()
+            //};
+            return View(oLista);
         }
         public JsonResult Paginar()
             {
@@ -183,24 +183,10 @@ namespace ProyectoADESS.Controllers
         }
 
         [HttpGet]
-        public IActionResult Limpiar(int id_add)
+        public IActionResult Limpiar()
         {
-            var ocontacto = _Contacto.Obtener(id_add);
-            return View(ocontacto);
-        }
-        [HttpPost]
-        public IActionResult Limpiar(ClassAdd oid_add)
-        {
-            var respuesta = _Contacto.Limpiar(oid_add.Id_add);
-
-            if (respuesta)
-            {
-                return RedirectToAction("Listar");
-            }
-            else
-            {
-                return View();
-            }
+            _Contacto.Limpiar();
+            return RedirectToAction("Listar");
         }
 
         public IActionResult VerficarCedula(bool cedula)

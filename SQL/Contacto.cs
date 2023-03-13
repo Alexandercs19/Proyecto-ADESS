@@ -231,7 +231,7 @@ namespace ProyectoADESS.SQL
             return rpta;
         }
 
-        public bool Limpiar(int Id_add)
+        public bool Limpiar()
         {
             bool rpta;
 
@@ -243,7 +243,7 @@ namespace ProyectoADESS.SQL
                 {
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_Limpiar", conexion);
-                    cmd.Parameters.AddWithValue("id_add", Id_add);
+                    //cmd.Parameters.AddWithValue("id_add", Id_add);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }
