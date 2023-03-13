@@ -5,24 +5,8 @@
       "PackagePath": "staticwebassets\\ProyectoADESS.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\4f9d733e-596d-4313-808f-ed12e61c59f7.txt",
-      "PackagePath": "staticwebassets\\4f9d733e-596d-4313-808f-ed12e61c59f7.txt"
-    },
-    {
-      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\5cf5710d-7ed1-4c03-9052-fb6ddefc099d.txt",
-      "PackagePath": "staticwebassets\\5cf5710d-7ed1-4c03-9052-fb6ddefc099d.txt"
-    },
-    {
-      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\9c55e5a8-5bd9-45d4-ab68-50b72cd907ad.txt",
-      "PackagePath": "staticwebassets\\9c55e5a8-5bd9-45d4-ab68-50b72cd907ad.txt"
-    },
-    {
       "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
-      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\fac3d57e-bc17-4725-b0e3-8678f8fa2af2.txt",
-      "PackagePath": "staticwebassets\\fac3d57e-bc17-4725-b0e3-8678f8fa2af2.txt"
     },
     {
       "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\favicon.ico",
@@ -31,6 +15,310 @@
     {
       "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bootstrap4.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bootstrap5.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bootstrap5.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bootstrap5.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bootstrap5.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bulma.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bulma.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bulma.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.bulma.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.dataTables.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.dataTables.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.foundation.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.foundation.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.jqueryui.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.semanticui.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.semanticui.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\css\\autoFill.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bootstrap4.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bootstrap4.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bootstrap4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bootstrap5.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bootstrap5.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bootstrap5.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bootstrap5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bulma.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bulma.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bulma.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.bulma.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.dataTables.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.dataTables.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.foundation.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.foundation.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.foundation.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.foundation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.jqueryui.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.jqueryui.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.jqueryui.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.jqueryui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.semanticui.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.semanticui.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.semanticui.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\autoFill.semanticui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\dataTables.autoFill.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\dataTables.autoFill.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\AutoFill-2.5.2\\js\\dataTables.autoFill.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\AutoFill-2.5.2\\js\\dataTables.autoFill.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bootstrap4.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bootstrap5.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bootstrap5.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bootstrap5.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bootstrap5.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bulma.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bulma.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bulma.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.bulma.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.dataTables.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.dataTables.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.foundation.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.foundation.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.jqueryui.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.semanticui.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.semanticui.min.css",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\buttons.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\common.scss",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\common.scss"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\css\\mixins.scss",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\css\\mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bootstrap4.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bootstrap4.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bootstrap4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bootstrap5.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bootstrap5.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bootstrap5.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bootstrap5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bulma.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bulma.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bulma.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.bulma.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.colVis.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.colVis.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.colVis.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.colVis.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.dataTables.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.dataTables.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.foundation.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.foundation.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.foundation.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.foundation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.html5.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.html5.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.html5.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.html5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.jqueryui.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.jqueryui.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.jqueryui.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.jqueryui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.print.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.print.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.print.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.print.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.semanticui.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.semanticui.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.semanticui.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\buttons.semanticui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\dataTables.buttons.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\dataTables.buttons.js"
+    },
+    {
+      "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\Buttons-2.3.5\\js\\dataTables.buttons.min.js",
+      "PackagePath": "staticwebassets\\lib\\DataTable\\Buttons-2.3.5\\js\\dataTables.buttons.min.js"
     },
     {
       "Id": "C:\\Users\\Tepig\\source\\repos\\ProyectoADESS\\wwwroot\\lib\\DataTable\\DataTables-1.13.3\\css\\dataTables.bootstrap.css",

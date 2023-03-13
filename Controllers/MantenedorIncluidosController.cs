@@ -44,8 +44,6 @@ namespace ProyectoADESS.Controllers
             return File(new byte[0], tipoMime, nombreArchivo);
         }
 
-
-
         public IActionResult Buscar(string cedula, string nombre, string apellido)
         {
             var usuarios = from Contacto in _Contacto.Listar() select Contacto;
@@ -66,7 +64,7 @@ namespace ProyectoADESS.Controllers
             return View(usuarios.ToList());
 
         }
-        public IActionResult Listar(PaginacionViewModel paginacionViewModel)
+        public IActionResult Listar(PaginacionRespuesta paginacionViewModel)
         {
             var oLista = _Contacto.Listar();
             var respuestaVM = new PaginacionRespuesta<ClassAdd>
@@ -80,32 +78,35 @@ namespace ProyectoADESS.Controllers
             return View(respuestaVM);
         }
         public JsonResult Paginar()
-        {
+            {
+            var lista = new List<ClassAdd>();
+
             var cn = new Conexion();
-            List<ClassAdd> lista = new List<ClassAdd>();
 
             using (var conexion = new SqlConnection(cn.getCadenaSQL()))
             {
                 conexion.Open();
-                var cmd = new SqlCommand("sp_PaginarIncluidos", conexion);
+                SqlCommand cmd = new SqlCommand("sp_PaginarIncluidos", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var dr = cmd.ExecuteReader())
                 {
                     while (dr.Read())
-                        lista.Add(new ClassAdd
+                    {
+                        lista.Add(new ClassAdd()
                         {
-                            Cedula_add = dr["Cedula_add"].ToString(),
-                            Apellido = dr["Apellido"].ToString(),
-                            Nombre = dr["Nombre"].ToString(),
-                            Sub = dr["Sub"].ToString(),
-                            Monto = dr["Monto"].ToString(),
-                            Fecha_add = dr["Fecha_add"].ToString(),
-                            Id_add = Convert.ToInt32(dr["Id_add"])
+                            Cedula_add = dr["cedula_add"].ToString(),
+                            Apellido = dr["apellido"].ToString(),
+                            Nombre = dr["nombre"].ToString(),
+                            Sub = dr["sub"].ToString(),
+                            Monto = dr["monto"].ToString(),
+                            Fecha_add = dr["fecha_add"].ToString(),
+                            Id_add = Convert.ToInt32(dr["id_add"])
                         });
+                    }
                 }
             }
-            return Json(new { data = lista });
+            return Json(lista);
         }
         [HttpGet]
         public IActionResult Guardar()
@@ -133,10 +134,12 @@ namespace ProyectoADESS.Controllers
             }
 
         }
-        public IActionResult Editar(int Id_add)
+        [HttpGet]
+        public IActionResult Editar(int id_add)
         {
             //Para devolver metodo a la vista
-            var ocontacto = _Contacto.Obtener(Id_add);
+
+            var ocontacto = _Contacto.Obtener(id_add);
             return View(ocontacto);
 
 
@@ -178,7 +181,28 @@ namespace ProyectoADESS.Controllers
                 return View();
             }
         }
+
         [HttpGet]
+        public IActionResult Limpiar(int id_add)
+        {
+            var ocontacto = _Contacto.Obtener(id_add);
+            return View(ocontacto);
+        }
+        [HttpPost]
+        public IActionResult Limpiar(ClassAdd oid_add)
+        {
+            var respuesta = _Contacto.Limpiar(oid_add.Id_add);
+
+            if (respuesta)
+            {
+                return RedirectToAction("Listar");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
         public IActionResult VerficarCedula(bool cedula)
         {
             var ced_exist = _Contacto.OptenerCedula(cedula);

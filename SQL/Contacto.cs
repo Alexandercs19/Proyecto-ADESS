@@ -231,6 +231,32 @@ namespace ProyectoADESS.SQL
             return rpta;
         }
 
+        public bool Limpiar(int Id_add)
+        {
+            bool rpta;
+
+            try
+            {
+                var cn = new Conexion();
+
+                using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("sp_Limpiar", conexion);
+                    cmd.Parameters.AddWithValue("id_add", Id_add);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+                }
+                rpta = true;
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message;
+                rpta = false;
+            }
+            return rpta;
+        }
+
         internal object ContactoLista()
         {
             throw new NotImplementedException();
@@ -269,5 +295,6 @@ namespace ProyectoADESS.SQL
 
             return rpta;
         }
+
     }
 }

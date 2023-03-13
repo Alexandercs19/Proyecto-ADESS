@@ -1,0 +1,20 @@
+﻿@model ClassAdd
+@{
+    ViewData["Title"] = "Limpiar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card" style="text-align:center; font-size: 25px;">
+    <div class="card-header">
+       Incluidos
+    </div>
+</div>
+<form asp-action="Limpiar" asp-controller="MantenedorIncluidos" method="post">
+    <input asp-for="Id_add" type="hidden" class="form-control">
+    <div class="alert alert-danger" role="alert">
+        ¿Deseas eliminar todo los datos de la tabla? @Html.DisplayTextFor(m =>m.Id_add)
+    </div>
+    <button type="submit" class="btn btn-danger" style="text-decoration:none; position: relative; top:5px;">Eliminar</button>
+    <button class="btn btn-warning" asp-action="Listar" style="text-decoration:none; position: relative; top:5px;">Volver a la lista</button>
+</form>
+
