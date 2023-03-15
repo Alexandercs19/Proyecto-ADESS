@@ -24,7 +24,7 @@
             </div>
             <div class="col-auto">
                 <label for="Motivo" class="visually-hidden">Motivo</label>
-                <input type="text" class="form-control" name="motivo" placeholder="Motivo"> 
+                <input type="text" class="form-control" name="motivo" placeholder="Motivo">
             </div>
             <div class="col-auto">
                 <label for="Fecha" class="visually-hidden">Fecha</label>
@@ -47,33 +47,39 @@
                             <th>Fecha</th>
                         </tr>
                     </thead>
-                    @*<tbody>
+                    <tbody>
                         @foreach (var item in Model)
                         {
-                            <tr>
-                                <td>@item.Cedula</td>
-                                <td>@item.Motivo</td>
-                                <td>@item.Fecha</td>
-                                <td>
-                                    <a asp-action="Editar" asp-controller="MantenedorExcluidos" class="btn btn-success btn-sm" asp-route-idExcluidos="@item.IdExcluidos">Editar</a>
-                                    <a asp-action="Eliminar" asp-controller="MantenedorExcluidos" class="btn btn-danger btn-sm" asp-route-id_add="@item.IdExcluidos">Eliminar</a>
-                                </td>
-                            </tr>
+                        <tr>
+                            <td>@item.Cedula</td>
+                            <td>@item.Motivo</td>
+                            <td>@item.Fecha</td>
+                            <td>
+                                <a asp-action="editar" asp-controller="MantenedorExcluidos" class="btn btn-success btn-sm" asp-route-idExcluidos="@item.IdExcluidos">editar</a>
+                                <a asp-action="eliminar" asp-controller="MantenedorExcluidos" class="btn btn-danger btn-sm" asp-route-idExcluidos="@item.IdExcluidos">eliminar</a>
+                            </td>
+                        </tr>
+
                         }
-                    </tbody>*@
+                    </tbody>
                 </table>
             </div>
             <a href="/Home/index" style="text-decoration:none; position: relative; bottom:5px;"><button class="btn btn-warning">Volver al menu principal</button></a>
         </div>
         <div class="col-auto" style="position: relative; top: 8px; left:555px; ">
+            <a class="btn btn-danger mb-3" asp-controller="MantenedorExcluidos" asp-action="Limpiar">Limpiar Registro</a>
             <a class="btn btn-success mb-3" asp-controller="MantenedorExcluidos" asp-action="GenerarArchivo" methop="post">Generar arhivo .txt</a>
         </div>
     </div>
 </div>
 
-@section scriptss{
+    @section scripts{
     <link src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js" />
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>
-    <script src="~/lib/dt/dtlistarexcluidos.js"></script>
- }
+        @*<script src="~/lib/dt/dtlistar.js"></script>*@
+    <script>
+        $(document).ready(function () {
+            $('#examples').DataTable();
+        });
+    </script>
+     }
+

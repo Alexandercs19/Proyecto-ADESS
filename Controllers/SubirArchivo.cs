@@ -81,8 +81,8 @@ namespace ProyectoADESS.Controllers
             var registro = new ClassAdd
             {
                 Cedula_add = line.Substring(0, 11),
-                Apellido = line.Substring(41, 30),
-                Nombre = line.Substring(11, 30),
+                Apellido = line.Substring(11, 30),
+                Nombre = line.Substring(41, 30),
                 Sub = line.Substring(71, 4),
                 Monto = line.Substring(75, 9),
                 Fecha_add = line.Substring(84)

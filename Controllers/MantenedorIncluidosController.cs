@@ -165,6 +165,20 @@ namespace ProyectoADESS.Controllers
                 return View();
             }
         }
+
+        public IActionResult EditarFecha(ClassAdd afecha_add)
+        {
+            var fechaeditada = _Contacto.EditarFecha(afecha_add);
+
+                if (fechaeditada)
+            {
+                return RedirectToAction("Listar");
+            }
+            else
+            {
+                return View();
+            }
+        }
         public IActionResult Eliminar(int Id_add)
         {
             //Para devolver el metodo a la vista
@@ -195,6 +209,7 @@ namespace ProyectoADESS.Controllers
             return RedirectToAction("Listar");
         }
 
+        [HttpGet]
         public IActionResult VerficarCedula(string cedula)
         {
             var ced_exist = _Contacto.ObtenerCedula(cedula);

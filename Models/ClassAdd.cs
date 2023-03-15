@@ -7,7 +7,6 @@ namespace ProyectoADESS.Models
     {
 
         [Required(ErrorMessage ="Este campo es obligatorio")]
-        [Remote(action: "VerficarCedula", controller: "MantenedorIncluidos")]
         public string Cedula_add { get; set; }
 
         [Required(ErrorMessage = "Este campo es obligatorio")]

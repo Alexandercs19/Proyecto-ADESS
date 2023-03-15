@@ -1,0 +1,22 @@
+﻿@model ClassAdd
+@{
+    ViewData["Title"] = "EditarFecha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card" style="text-align:center; font-size: 25px;">
+    <div class="card-header">
+        Formulario para Incluidos
+    </div>
+</div>
+<form asp-action="EditarFecha" asp-controller="MantenedorIncluidos" method="post">
+    <input asp-for="Id_add" type="hidden" class="form-control">
+    <div class="form-group">
+        <label class="exampleInputEmail1">Introduzca la Fecha segun el formato ya visto</label>
+        <input asp-for="Fecha_add" type="text" class="form-control" placeholder="Ejemplo 202005" typeof="num">
+    </div>
+    <button type="submit" class="btn btn-primary" style="text-decoration:none; position: relative; top:5px;">Guardar</button>
+    <button class="btn btn-warning" asp-action="Listar" style="text-decoration:none; position: relative; top:5px;">Volver a la lista</button>
+</form>
+
+

@@ -57,7 +57,7 @@ namespace ProyectoADESS.Controllers
                     {
                         lista.Add(new Excluidos()
                         {
-                            
+
                             Cedula = dr["Cedula"].ToString(),
                             Motivo = dr["Motivo"].ToString(),
                             Fecha = dr["Fecha"].ToString(),
@@ -132,11 +132,19 @@ namespace ProyectoADESS.Controllers
 
 
         }
+        [HttpGet]
+        public IActionResult Limpiar()
+        {
+            _contactoExcluidos.Limpiar();
+            return RedirectToAction("Listar");
+        }
+
+
         [HttpPost]
         public IActionResult Editar(Excluidos oid_ad)
         {
             //Para editar los datos tanto como en la BD como en la vista
-            var respuesta = _contactoExcluidos.Editar(oid_ad);
+            var respuesta = _contactoExcluidos.EditarExcluidos(oid_ad);
 
             if (respuesta)
             {
@@ -159,7 +167,7 @@ namespace ProyectoADESS.Controllers
         public IActionResult Eliminar(Excluidos oid_add)
         {
             //Para eliminar los datos tanto como en la BD como en la vista
-            var respuesta = _contactoExcluidos.Eliminar(oid_add.IdExcluidos);
+            var respuesta = _contactoExcluidos.EliminarExcluidos(oid_add.IdExcluidos);
 
             if (respuesta)
             {

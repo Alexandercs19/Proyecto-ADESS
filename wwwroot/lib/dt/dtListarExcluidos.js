@@ -1,10 +1,10 @@
 ﻿var ruta = window.location.origin;
 $(document).ready(function () {
-    $('#examples').DataTable({
+    $('#examples').datatable({
         "ajax":
         {
-            "url": ruta + `/MantenedorExcluidos/Paginar`,
-            "type": "GET",
+            "url": ruta + `/mantenedorexcluidos/paginar`,
+            "type": "get",
             "datatype": "json"
         },
         "columns": [

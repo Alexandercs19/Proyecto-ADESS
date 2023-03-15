@@ -37,6 +37,32 @@ namespace ProyectoADESS.SQL
             }
             return olista;
         }
+
+        public bool Limpiar()
+        {
+            bool rpta;
+
+            try
+            {
+                var cn = new Conexion();
+
+                using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("sp_LimpiarExcluidos", conexion);
+                    //cmd.Parameters.AddWithValue("id_add", Id_add);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+                }
+                rpta = true;
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message;
+                rpta = false;
+            }
+            return rpta;
+        }
         public Excluidos Obtener(int idApp)
         {
 
@@ -95,7 +121,7 @@ namespace ProyectoADESS.SQL
 
             return rpta;
         }
-        public bool Editar(Excluidos ocontacto)
+        public bool EditarExcluidos(Excluidos ocontacto)
         {
             bool rpta;
 
@@ -125,7 +151,7 @@ namespace ProyectoADESS.SQL
 
             return rpta;
         }
-        public bool Eliminar(int IdExcluidos)
+        public bool EliminarExcluidos(int IdExcluidos)
         {
             bool rpta;
 

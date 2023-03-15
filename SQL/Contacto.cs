@@ -65,8 +65,8 @@ namespace ProyectoADESS.SQL
                     while (dr.Read())
                     {
                         oCedula.Cedula_add = dr["cedula_add"].ToString();
+                        oCedula.Apellido = dr["apellido"].ToString();
                         oCedula.Nombre = dr["nombre"].ToString();
-                        oCedula.Cedula_add = dr["apellido"].ToString();
                         oCedula.Sub = dr["sub"].ToString();
                         oCedula.Fecha_add = dr["fecha_add"].ToString();
                         oCedula.Monto = dr["monto"].ToString();
@@ -76,6 +76,34 @@ namespace ProyectoADESS.SQL
             }
             return oCedula;
 
+        }
+
+        public bool EditarFecha(ClassAdd ocontacto)
+        {
+            bool rpta;
+
+            try
+            {
+                var cn = new Conexion();
+
+                using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+                {
+                    conexion.Open();
+                    SqlCommand cmd = new SqlCommand("sp_EditarFecha", conexion);
+                    cmd.Parameters.AddWithValue("fecha_add", ocontacto.Fecha_add);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+                }
+                rpta = true;
+
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message;
+                rpta = false;
+            }
+
+            return rpta;
         }
 
         public JsonResult Paginar()
