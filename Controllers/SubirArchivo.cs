@@ -17,7 +17,7 @@ namespace ProyectoADESS.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult listar(IFormFile Archivo)
+        public IActionResult listar(IFormFile Archivo )
         {
             List<ClassAdd> Registros = new List<ClassAdd>();
             if (Archivo != null)
@@ -32,7 +32,19 @@ namespace ProyectoADESS.Controllers
                 }
             }
 
-            return View(Registros);
+            Contacto contacto = new Contacto();
+            if (Registros != null && Registros.Count > 0)
+            {
+                Registros.ForEach(x => contacto.Guardar(x));
+                return View(Registros);
+            }
+            else
+            {
+                return BadRequest("Error ");
+            }
+
+
+            
         }
         [HttpPost]
         public IActionResult GetPersonasList(IFormFile ArchivoTxT)
@@ -54,21 +66,21 @@ namespace ProyectoADESS.Controllers
             return Ok(Registros);
         }
         [HttpPost]
-        public IActionResult GuardarRegistros([FromBody] List<ClassAdd> registros)
-        {
-            Contacto contacto = new Contacto();
-            if (registros != null && registros.Count > 0)
-            {
-                registros.ForEach(x => contacto.Guardar(x));
-                return Ok(registros);
-            }
-            else
-            {
-                return BadRequest("Error ");
-            }
+        //public IActionResult GuardarRegistros([FromBody] List<ClassAdd> registros)
+        //{
+        //    Contacto contacto = new Contacto();
+        //    if (registros != null && registros.Count > 0)
+        //    {
+        //        registros.ForEach(x => contacto.Guardar(x));
+        //        return Ok(registros);
+        //    }
+        //    else
+        //    {
+        //        return BadRequest("Error ");
+        //    }
 
 
-        }
+        //}
 
 
         public IActionResult privacy()

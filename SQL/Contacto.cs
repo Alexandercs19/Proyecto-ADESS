@@ -196,7 +196,8 @@ namespace ProyectoADESS.SQL
                     cmd.ExecuteNonQuery();
                 }
                 rpta = true;
-
+                
+                
             }
             catch (Exception ex)
             {
