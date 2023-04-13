@@ -1,27 +1,69 @@
 ﻿@model IEnumerable<ProyectoADESS.Models.ClassAdd>
 
 @{
-    ViewData["Title"] = "Buscar";
+    ViewData["Title"] = "Incluidos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section Estilos{
+    <link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" rel="stylesheet" />
 
+}
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <div class="Espacio-Container"></div>
+    <div class="BotonCargar-Container">
+    </div>
+    <form asp-controller="MantenedorIncluidos" method="post" class="row g-3" style="display: flex; justify-content: center; align-items: center; position: relative; bottom:11px;" enctype="multipart/form-data">
+
+        <div class="col-auto">
+            <label for="LabelBuscar2" class="visually-hidden">Buscar por: </label>
+            <label readonly class="form-control-plaintext" id="LabelBuscar1" value="Buscar por: ">Buscar por:</label>
+        </div>
+        <div class="col-auto">
+            <label class="visually-hidden">Cedula</label>
+            <input type="text" class="form-control" id="cedula_id" name="cedula" placeholder="Cedula">
+        </div>
+        <div class="col-auto">
+            <label class="visually-hidden">Nombre</label>
+            <input name="nombre" type="text" class="form-control" id="nombre_id" placeholder="Nombre">
+        </div>
+        <div class="col-auto">
+            <label class="visually-hidden">Apellido</label>
+            <input name="apellido" type="text" class="form-control" id="apellido_id" placeholder="Apellido">
+        </div>
+        <div class="col-auto" style="position: relative; top: 8px;">
+            <button type="submit" class="btn btn-primary mb-3" asp-action="Buscar">Buscar</button>
+        </div>
+        <div class="col-auto" style="position: relative; top: 8px;">
+            <a class="btn btn-warning mb-3" asp-controller="MantenedorIncluidos" asp-action="Guardar">Insertar nuevo registro</a>
+        </div>
+        <div class="col-auto" style="position: relative; top: 8px;">
+            <a class="btn btn-info mb-3" href="/MantenedorIncluidos/EditarFecha">Editar Fechas</a>
+        </div>
+    </form>
+    <div class="col-auto">
+        <a class="btn btn-success" href="/SubirArchivo/listar" style="margin:15px">Subir Archivo .txt</a>
+    </div>
 <div class="card">
     <div class="card-body">
-        <table class="table">
+        <table id="example" class="display" style="width:100%">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Cedula</th>
                     <th>Apellidos </th>
                     <th>Nombre</th>
                     <th>Sub</th>
                     <th>Monto</th>
                     <th>Fecha</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in Model)
                 {
                     <tr>
+                        <td>@item.Id_add</td>
                         <td>@item.Cedula_add</td>
                         <td>@item.Apellido</td>
                         <td>@item.Nombre</td>
@@ -29,13 +71,28 @@
                         <td>@item.Monto</td>
                         <td>@item.Fecha_add</td>
                         <td>
-                            <a asp-action="Editar" asp-controller="MantenedorIncluidos" class="btn btn-success btn-sm" asp-route-id_add="@item.Id_add">Editar</a>
-                            <a asp-action="Eliminar" asp-controller="MantenedorIncluidos" class="btn btn-danger btn-sm" asp-route-id_add="@item.Id_add">Eliminar</a>
+                            <a asp-action="editar" asp-controller="mantenedorincluidos" class="btn btn-success btn-sm" asp-route-id_add="@item.Id_add">editar</a>
+                            <a asp-action="eliminar" asp-controller="mantenedorincluidos" class="btn btn-danger btn-sm" asp-route-id_add="@item.Id_add">eliminar</a>
                         </td>
                     </tr>
                 }
             </tbody>
         </table>
     </div>
-    <a href="/MantenedorIncluidos/Listar" style="text-decoration:none; display:flex; justify-content:center; position: relative; bottom:5px;"><button class="btn btn-warning">Volver al Listado</button></a>
+    <a href="/MantenedorIncluidos/Listar" style="text-decoration:none; display:flex; justify-content:center; position: relative; bottom:5px;"><button class="btn btn-warning">Volver</button></a>
+    <div class="col-auto" style="position: relative; top: 8px; left:555px; ">
+        <a class="btn btn-danger mb-3" asp-controller="MantenedorIncluidos" asp-action="Limpiar">Limpiar Registro</a>
+        <a class="btn btn-success mb-3" asp-controller="MantenedorIncluidos" asp-action="GenerarArchivo" methop="post">Generar arhivo .txt</a>
+    </div>
 </div>
+</div>
+
+@section scripts{
+    <link src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js" />
+    @*<script src="~/lib/dt/dtlistar.js"></script>*@
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+     }
